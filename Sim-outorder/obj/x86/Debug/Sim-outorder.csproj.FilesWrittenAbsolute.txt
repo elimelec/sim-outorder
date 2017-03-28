@@ -1,0 +1,6 @@
+/home/ciprian/Sim-outorder/Sim-outorder/obj/x86/Debug/.NETFramework,Version=v4.5.AssemblyAttribute.cs
+/home/ciprian/Sim-outorder/Sim-outorder/obj/x86/Debug/Simoutorder.gtk-gui.gui.stetic
+/home/ciprian/Sim-outorder/Sim-outorder/bin/Debug/Sim-outorder.exe.mdb
+/home/ciprian/Sim-outorder/Sim-outorder/bin/Debug/Sim-outorder.exe
+/home/ciprian/Sim-outorder/Sim-outorder/obj/x86/Debug/Sim-outorder.exe
+/home/ciprian/Sim-outorder/Sim-outorder/obj/x86/Debug/Sim-outorder.exe.mdb

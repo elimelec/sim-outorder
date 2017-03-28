@@ -1,0 +1,5 @@
+C:\Users\Tedy\Documents\Projects\Sim-outorder\Sim-outorder\bin\Debug\Sim-outorder.exe
+C:\Users\Tedy\Documents\Projects\Sim-outorder\Sim-outorder\bin\Debug\Sim-outorder.pdb
+C:\Users\Tedy\Documents\Projects\Sim-outorder\Sim-outorder\obj\x86\Debug\Sim-outorder.exe
+C:\Users\Tedy\Documents\Projects\Sim-outorder\Sim-outorder\obj\x86\Debug\Sim-outorder.pdb
+C:\Users\Tedy\Documents\Projects\Sim-outorder\Sim-outorder\obj\x86\Debug\Sim-outorder.csprojResolveAssemblyReference.cache
