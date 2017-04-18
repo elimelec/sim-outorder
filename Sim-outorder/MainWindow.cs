@@ -72,7 +72,7 @@ public partial class MainWindow: Gtk.Window
 		return number;
 	}
 
-	private List<string> ActiveBenchmarks ()
+	private List<string> GetActiveBenchmarks ()
 	{
 		List<string> benchmarks = new List<string> ();
 		if (susanCheckBox.Active) {
@@ -89,43 +89,31 @@ public partial class MainWindow: Gtk.Window
 
 	private GeneticAlgorithmOptions CreateAlgorithmOptions ()
 	{
-		GeneticAlgorithmOptions geneticAlgorithmOptions = new GeneticAlgorithmOptions ();
-		geneticAlgorithmOptions.NumberOfCromozoms = InputValidation (numberOfCromozoms.Text, 10);
-		geneticAlgorithmOptions.NumberOfGenerations = InputValidation (numberOfGenerations.Text, 5);
-		geneticAlgorithmOptions.ElitesPercentage = InputValidation (elitesPercentageTextBox.Text, 50);
-		geneticAlgorithmOptions.CrossOverPercentage = 1 - (InputValidation (crossoverPercentageTextBox.Text, 50) / 100.00);
-		geneticAlgorithmOptions.MutationPercentage = 1 - (InputValidation (mutationPercentageTextBox.Text, 30) / 100.00);
-		geneticAlgorithmOptions.MutationOccurance = 1 - (InputValidation (mutationOccuranceTextBox.Text, 10) / 100.00);
-		geneticAlgorithmOptions.Benchmarks = ActiveBenchmarks ();
-		geneticAlgorithmOptions.SelectionMode = selectionMode;
+		var cromozoms = numberOfCromozoms.Text;
+		var generations = numberOfGenerations.Text;
+		var elites = elitesPercentageTextBox.Text;
+		var crossOver = crossoverPercentageTextBox.Text;
+		var mutationOccurance = mutationOccuranceTextBox.Text;
+		var mutationPercentage = mutationPercentageTextBox.Text;
+		var benchmarks = GetActiveBenchmarks ();
+		var selectionMode = this.selectionMode;
 
-		if (geneticAlgorithmOptions.SelectionMode == "Roulette Wheel") {
-			MessageDialog infoDialog = new MessageDialog (this, DialogFlags.DestroyWithParent, MessageType.Info, ButtonsType.Ok, "Roulette Wheel Selection not implemented yet, please change to another selection.");
-			infoDialog.SetPosition (WindowPosition.Center);
-			infoDialog.Run ();
-			infoDialog.Destroy ();
-			return null;
-		}
-
-		if (geneticAlgorithmOptions.SelectionMode == "Tournament") {
-			if (geneticAlgorithmOptions.NumberOfCromozoms < 5) {
-				MessageDialog errorDialog = new MessageDialog (this, DialogFlags.DestroyWithParent, MessageType.Info, ButtonsType.Ok, "In case of 'Tournament Selection' the number of cromozoms must be at least 5!");
-				errorDialog.SetPosition (WindowPosition.Center);
-				errorDialog.Run ();
-				errorDialog.Destroy ();
-				return null;
-			}
-		}
-
-		return geneticAlgorithmOptions;
+		return new GeneticAlgorithmOptions (cromozoms, generations, elites, crossOver, mutationOccurance, mutationPercentage, benchmarks, selectionMode);
 	}
 
 	protected void TestComandaTerminal (object sender, EventArgs e)
 	{
 		resultsText.Buffer.Clear ();
 
-		var geneticAlgorithmOptions = CreateAlgorithmOptions ();
-		if (geneticAlgorithmOptions == null) {
+		GeneticAlgorithmOptions options;
+
+		try {
+			options = CreateAlgorithmOptions ();
+		} catch (Exception ex) {
+			MessageDialog error = new MessageDialog (this, DialogFlags.DestroyWithParent, MessageType.Info, ButtonsType.Ok, ex.Message);
+			error.SetPosition (WindowPosition.Center);
+			error.Run ();
+			error.Destroy ();
 			return;
 		}
 
@@ -133,7 +121,7 @@ public partial class MainWindow: Gtk.Window
 		stopWatch.Start ();
 
 		GeneticAlgorithm algorithm = new GeneticAlgorithm ();
-		List<Cromozom> results = algorithm.Start (geneticAlgorithmOptions);
+		List<Cromozom> results = algorithm.Start (options);
 		foreach (var cromozom in results) {
 			resultsText.Buffer.Text += "vex_" + cromozom.Index + ".cfg - Generation: " + cromozom.GenerationNumber + " - IPC: " + cromozom.Fitness + "\n";
 		}
