@@ -8,6 +8,7 @@ using Gdk;
 public partial class MainWindow: Gtk.Window
 {
 	string selectionMode = "Elitist";
+
 	public MainWindow () : base (Gtk.WindowType.Toplevel)
 	{
 		Build ();
@@ -17,8 +18,8 @@ public partial class MainWindow: Gtk.Window
 		MasterModel.AmIntratPeFormaDeParametriiCache = false;
 		image6.File = "soo.PNG";
 		this.Focus = button1;
-		IOFunctions.ClearFiles ("vex-3.43/bin/","ta.log*");
-		IOFunctions.ClearFiles ("vex-3.43/share/apps/h264dec/test/Configurations/","*cfg");
+		IOFunctions.ClearFiles ("vex-3.43/bin/", "ta.log*");
+		IOFunctions.ClearFiles ("vex-3.43/share/apps/h264dec/test/Configurations/", "*cfg");
 	}
 
 	protected void OnDeleteEvent (object sender, DeleteEventArgs a)
@@ -36,7 +37,7 @@ public partial class MainWindow: Gtk.Window
 		//
 		// System.Diagnostics.Process.Start ("Sim-OutorderHelp.chm");
 	}
-		
+
 	protected void OnAboutMenuItemActivated (object sender, EventArgs e)
 	{
 		AboutForm aboutForm = new AboutForm ();
@@ -45,28 +46,33 @@ public partial class MainWindow: Gtk.Window
 		aboutForm.Dispose ();
 	}
 
-	protected void OnParametersMenuItemActivated (object sender, EventArgs e) { }
+	protected void OnParametersMenuItemActivated (object sender, EventArgs e)
+	{
+	}
 
-	protected void OnCacheParametersMenuItemActivated (object sender, EventArgs e) { }
+	protected void OnCacheParametersMenuItemActivated (object sender, EventArgs e)
+	{
+	}
 
-	protected void OnBpredParametersMenuItemActivated (object sender, EventArgs e) { }
+	protected void OnBpredParametersMenuItemActivated (object sender, EventArgs e)
+	{
+	}
 
 	protected void OnExitMenuItemActivated (object sender, EventArgs e)
 	{
 		Application.Quit ();
 	}
 
-	private int InputValidation(string input, int defaultValue)
+	private int InputValidation (string input, int defaultValue)
 	{
 		int number;
-		if (!int.TryParse(input, out number))
-		{
+		if (!int.TryParse (input, out number)) {
 			number = defaultValue;
 		}
 		return number;
 	}
 
-	private List<string> ActiveBenchmarks()
+	private List<string> ActiveBenchmarks ()
 	{
 		List<string> benchmarks = new List<string> ();
 		if (susanCheckBox.Active) {
@@ -81,63 +87,70 @@ public partial class MainWindow: Gtk.Window
 		return benchmarks;
 	}
 
-	protected void TestComandaTerminal (object sender, EventArgs e)
+	private GeneticAlgorithmOptions CreateAlgorithmOptions ()
 	{
-		resultsText.Buffer.Clear ();
-
 		GeneticAlgorithmOptions geneticAlgorithmOptions = new GeneticAlgorithmOptions ();
-		geneticAlgorithmOptions.NumberOfCromozoms = InputValidation(numberOfCromozoms.Text, 10);
-		geneticAlgorithmOptions.NumberOfGenerations = InputValidation(numberOfGenerations.Text, 5);
-		geneticAlgorithmOptions.ElitesPercentage = InputValidation(elitesPercentageTextBox.Text, 50);
-		geneticAlgorithmOptions.CrossOverPercentage = 1 - (InputValidation(crossoverPercentageTextBox.Text, 50)/100.00);
-		geneticAlgorithmOptions.MutationPercentage = 1 - (InputValidation(mutationPercentageTextBox.Text, 30)/100.00);
-		geneticAlgorithmOptions.MutationOccurance = 1 - (InputValidation(mutationOccuranceTextBox.Text, 10)/100.00);
+		geneticAlgorithmOptions.NumberOfCromozoms = InputValidation (numberOfCromozoms.Text, 10);
+		geneticAlgorithmOptions.NumberOfGenerations = InputValidation (numberOfGenerations.Text, 5);
+		geneticAlgorithmOptions.ElitesPercentage = InputValidation (elitesPercentageTextBox.Text, 50);
+		geneticAlgorithmOptions.CrossOverPercentage = 1 - (InputValidation (crossoverPercentageTextBox.Text, 50) / 100.00);
+		geneticAlgorithmOptions.MutationPercentage = 1 - (InputValidation (mutationPercentageTextBox.Text, 30) / 100.00);
+		geneticAlgorithmOptions.MutationOccurance = 1 - (InputValidation (mutationOccuranceTextBox.Text, 10) / 100.00);
 		geneticAlgorithmOptions.Benchmarks = ActiveBenchmarks ();
 		geneticAlgorithmOptions.SelectionMode = selectionMode;
 
 		if (geneticAlgorithmOptions.SelectionMode == "Roulette Wheel") {
-			MessageDialog infoDialog = new MessageDialog(this, 
-				DialogFlags.DestroyWithParent, MessageType.Info, 
-				ButtonsType.Ok, "Roulette Wheel Selection not implemented yet, please change to another selection.");
+			MessageDialog infoDialog = new MessageDialog (this, DialogFlags.DestroyWithParent, MessageType.Info, ButtonsType.Ok, "Roulette Wheel Selection not implemented yet, please change to another selection.");
 			infoDialog.SetPosition (WindowPosition.Center);
-			infoDialog.Run();
-			infoDialog.Destroy();
-			return;
+			infoDialog.Run ();
+			infoDialog.Destroy ();
+			return null;
 		}
 
 		if (geneticAlgorithmOptions.SelectionMode == "Tournament") {
 			if (geneticAlgorithmOptions.NumberOfCromozoms < 5) {
-				MessageDialog errorDialog = new MessageDialog(this, 
-					DialogFlags.DestroyWithParent, MessageType.Info, 
-					ButtonsType.Ok, "In case of 'Tournament Selection' the number of cromozoms must be at least 5!");
+				MessageDialog errorDialog = new MessageDialog (this, DialogFlags.DestroyWithParent, MessageType.Info, ButtonsType.Ok, "In case of 'Tournament Selection' the number of cromozoms must be at least 5!");
 				errorDialog.SetPosition (WindowPosition.Center);
-				errorDialog.Run();
-				errorDialog.Destroy();
-				return;
+				errorDialog.Run ();
+				errorDialog.Destroy ();
+				return null;
 			}
 		}
 
-		Stopwatch stopWatch = new Stopwatch();
-		stopWatch.Start();
+		return geneticAlgorithmOptions;
+	}
+
+	protected void TestComandaTerminal (object sender, EventArgs e)
+	{
+		resultsText.Buffer.Clear ();
+
+		var geneticAlgorithmOptions = CreateAlgorithmOptions ();
+		if (geneticAlgorithmOptions == null) {
+			return;
+		}
+
+		Stopwatch stopWatch = new Stopwatch ();
+		stopWatch.Start ();
 
 		GeneticAlgorithm algorithm = new GeneticAlgorithm ();
 		List<Cromozom> results = algorithm.Start (geneticAlgorithmOptions);
 		foreach (var cromozom in results) {
-			resultsText.Buffer.Text += "vex_"+cromozom.Index+".cfg - Generation: "+cromozom.GenerationNumber+" - IPC: "+cromozom.Fitness+"\n";
+			resultsText.Buffer.Text += "vex_" + cromozom.Index + ".cfg - Generation: " + cromozom.GenerationNumber + " - IPC: " + cromozom.Fitness + "\n";
 		}
 
-		stopWatch.Stop();
+		stopWatch.Stop ();
 		TimeSpan duration = stopWatch.Elapsed;
 
-		MessageDialog md = new MessageDialog(this, 
-			DialogFlags.DestroyWithParent, MessageType.Info, 
-			ButtonsType.Ok, "Done!\nDuration: "+duration);
+		MessageDialog md = new MessageDialog (this, 
+			                   DialogFlags.DestroyWithParent, MessageType.Info, 
+			                   ButtonsType.Ok, "Done!\nDuration: " + duration);
 		md.SetPosition (WindowPosition.Center);
-		md.Run();
-		md.Destroy();
+		md.Run ();
+		md.Destroy ();
 	}
 
-	protected void OnRadiobutton1Toggled (object sender, EventArgs e) { 
+	protected void OnRadiobutton1Toggled (object sender, EventArgs e)
+	{ 
 		selectionMode = (sender as RadioButton).Label;
 	}
 }
