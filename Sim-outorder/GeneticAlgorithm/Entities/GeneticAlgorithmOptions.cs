@@ -19,9 +19,9 @@ namespace Simoutorder
 
 		public List<string> Benchmarks { get; set; }
 
-		public string SelectionMode { get; set; }
+		public AlgorithmSelectionMode SelectionMode { get; set; }
 
-		public GeneticAlgorithmOptions (string cromozoms, string generations, string elites, string crossOver, string mutationOccurance, string mutationPercentage, List<string> benchmarks, string selectionMode)
+		public GeneticAlgorithmOptions (string cromozoms, string generations, string elites, string crossOver, string mutationOccurance, string mutationPercentage, List<string> benchmarks, AlgorithmSelectionMode selectionMode)
 		{
 			// parse ints without check; it's by design
 			NumberOfCromozoms = int.Parse(cromozoms);
@@ -33,11 +33,11 @@ namespace Simoutorder
 			Benchmarks = benchmarks;
 			SelectionMode = selectionMode;
 
-			if (SelectionMode == "Roulette Wheel") {
+			if (SelectionMode == AlgorithmSelectionMode.RouletteWheel) {
 				throw new NotImplementedException ("Roulette Wheel Selection not implemented yet, please change to another selection.");
 			}
 
-			if (SelectionMode == "Tournament") {
+			if (SelectionMode == AlgorithmSelectionMode.Tournament) {
 				if (NumberOfCromozoms < 5) {
 					throw new ArgumentException ("In case of 'Tournament Selection' the number of cromozoms must be at least 5!", cromozoms);
 				}

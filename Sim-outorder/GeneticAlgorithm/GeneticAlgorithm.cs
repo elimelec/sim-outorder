@@ -50,10 +50,10 @@ namespace Simoutorder
 
 				if (IsNotLastIteration(geneticAlgorithmOptions.NumberOfGenerations)) 
 				{
-					if (geneticAlgorithmOptions.SelectionMode == "Elitist") {
+					if (geneticAlgorithmOptions.SelectionMode == AlgorithmSelectionMode.Elitist) {
 						CreateNewGenerationWithElitistSelection ();
 					}
-					if (geneticAlgorithmOptions.SelectionMode == "Tournament") {
+					if (geneticAlgorithmOptions.SelectionMode == AlgorithmSelectionMode.Tournament) {
 						CreateNewGenerationWithTournamentSelection ();
 					}
 

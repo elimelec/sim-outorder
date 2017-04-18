@@ -89,6 +89,7 @@
     <Compile Include="GeneticAlgorithm\Entities\CromozomValues.cs" />
     <Compile Include="GeneticAlgorithm\GeneticAlgorithm.cs" />
     <Compile Include="GeneticAlgorithm\Entities\GeneticAlgorithmOptions.cs" />
+    <Compile Include="GeneticAlgorithm\Entities\AlgorithmSelectionMode.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>

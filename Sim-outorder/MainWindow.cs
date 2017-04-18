@@ -7,7 +7,7 @@ using Gdk;
 
 public partial class MainWindow: Gtk.Window
 {
-	string selectionMode = "Elitist";
+	AlgorithmSelectionMode selectionMode = AlgorithmSelectionMode.Elitist;
 
 	public MainWindow () : base (Gtk.WindowType.Toplevel)
 	{
@@ -139,6 +139,19 @@ public partial class MainWindow: Gtk.Window
 
 	protected void OnRadiobutton1Toggled (object sender, EventArgs e)
 	{ 
-		selectionMode = (sender as RadioButton).Label;
+		var label = (sender as RadioButton).Label;
+		switch (label) {
+		case "Elitist":
+			selectionMode = AlgorithmSelectionMode.Elitist;
+			break;
+		case "Tournament":
+			selectionMode = AlgorithmSelectionMode.Tournament;
+			break;
+		case "Roulette Wheel":
+			selectionMode = AlgorithmSelectionMode.RouletteWheel;
+			break;
+		default:
+			throw new Exception ("Invalid selection: " + selectionMode);
+		}
 	}
 }
