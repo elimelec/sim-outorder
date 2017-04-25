@@ -461,7 +461,7 @@
         <child>
           <widget class="Gtk.Label" id="label5">
             <property name="MemberName" />
-            <property name="LabelProp" translatable="yes">Version: Alpha</property>
+            <property name="LabelProp" translatable="yes">Version: Beta</property>
           </widget>
           <packing>
             <property name="X">20</property>
@@ -481,21 +481,11 @@
         <child>
           <widget class="Gtk.Label" id="label7">
             <property name="MemberName" />
-            <property name="LabelProp" translatable="yes">Razvan GHENA</property>
+            <property name="LabelProp" translatable="yes">Elimelec Burghelea</property>
           </widget>
           <packing>
             <property name="X">32</property>
             <property name="Y">145</property>
-          </packing>
-        </child>
-        <child>
-          <widget class="Gtk.Label" id="label8">
-            <property name="MemberName" />
-            <property name="LabelProp" translatable="yes">Ciprian MIHAIU</property>
-          </widget>
-          <packing>
-            <property name="X">32</property>
-            <property name="Y">169</property>
           </packing>
         </child>
         <child>
@@ -525,26 +515,6 @@
           <packing>
             <property name="X">15</property>
             <property name="Y">17</property>
-          </packing>
-        </child>
-        <child>
-          <widget class="Gtk.Label" id="label2">
-            <property name="MemberName" />
-            <property name="LabelProp" translatable="yes">Ciprian DRAGHICI</property>
-          </widget>
-          <packing>
-            <property name="X">167</property>
-            <property name="Y">169</property>
-          </packing>
-        </child>
-        <child>
-          <widget class="Gtk.Label" id="label1">
-            <property name="MemberName" />
-            <property name="LabelProp" translatable="yes">Florin NEMES</property>
-          </widget>
-          <packing>
-            <property name="X">168</property>
-            <property name="Y">146</property>
           </packing>
         </child>
       </widget>
