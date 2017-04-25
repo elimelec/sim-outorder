@@ -227,75 +227,75 @@ namespace Simoutorder
 				{
 					if(property.Name == "CoreCkFreqValues") 
 					{
-						property.SetValue(cromozom, CromozomValues.CoreCkFreqValues [rand.Next (0, 100)]);
+						property.SetValue(cromozom, CromozomValues.CoreCkFreqValues.PickRandom());
 					}
 					if(property.Name == "BusCkFreq") 
 					{
-						property.SetValue(cromozom, CromozomValues.BusCkFreq [rand.Next (0, 3)]);
+						property.SetValue(cromozom, CromozomValues.BusCkFreq.PickRandom());
 					}
 					if(property.Name == "lg2CacheSize") 
 					{
-						property.SetValue(cromozom, CromozomValues.lg2CacheSize [rand.Next (0, 3)]);
+						property.SetValue(cromozom, CromozomValues.lg2CacheSize.PickRandom());
 					}
 					if(property.Name == "lg2Sets") 
 					{
-						property.SetValue(cromozom, CromozomValues.lg2Sets [rand.Next (0, 3)]);
+						property.SetValue(cromozom, CromozomValues.lg2Sets.PickRandom());
 					}
 					if(property.Name == "lg2LineSize") 
 					{
-						property.SetValue(cromozom, CromozomValues.lg2LineSize [rand.Next (0, 3)]);
+						property.SetValue(cromozom, CromozomValues.lg2LineSize.PickRandom());
 					}
 					if(property.Name == "MissPenalty") 
 					{
-						property.SetValue(cromozom, CromozomValues.MissPenalty [rand.Next (0, 3)]);
+						property.SetValue(cromozom, CromozomValues.MissPenalty.PickRandom());
 					}
 					if(property.Name == "WBPenalty") 
 					{
-						property.SetValue(cromozom, CromozomValues.WBPenalty [rand.Next (0, 3)]);
+						property.SetValue(cromozom, CromozomValues.WBPenalty.PickRandom());
 					}
 					if(property.Name == "lg2StrSize") 
 					{
-						property.SetValue(cromozom, CromozomValues.lg2StrSize [rand.Next (0, 3)]);
+						property.SetValue(cromozom, CromozomValues.lg2StrSize.PickRandom());
 					}
 					if(property.Name == "lg2StrSets") 
 					{
-						property.SetValue(cromozom, CromozomValues.lg2StrSets [rand.Next (0, 3)]);
+						property.SetValue(cromozom, CromozomValues.lg2StrSets.PickRandom());
 					}
 					if(property.Name == "lg2StrLineSize") 
 					{
-						property.SetValue(cromozom, CromozomValues.lg2StrLineSize [rand.Next (0, 3)]);
+						property.SetValue(cromozom, CromozomValues.lg2StrLineSize.PickRandom());
 					}
 					if(property.Name == "StrMissPenalty") 
 					{
-						property.SetValue(cromozom, CromozomValues.StrMissPenalty [rand.Next (0, 3)]);
+						property.SetValue(cromozom, CromozomValues.StrMissPenalty.PickRandom());
 					}
 					if(property.Name == "StrWBPenalty") 
 					{
-						property.SetValue(cromozom, CromozomValues.StrWBPenalty [rand.Next (0, 3)]);
+						property.SetValue(cromozom, CromozomValues.StrWBPenalty.PickRandom());
 					}
 					if(property.Name == "lg2ICacheSize") 
 					{
-						property.SetValue(cromozom, CromozomValues.lg2ICacheSize [rand.Next (0, 3)]);
+						property.SetValue(cromozom, CromozomValues.lg2ICacheSize.PickRandom());
 					}
 					if(property.Name == "lg2ICacheSets") 
 					{
-						property.SetValue(cromozom, CromozomValues.lg2ICacheSets [rand.Next (0, 3)]);
+						property.SetValue(cromozom, CromozomValues.lg2ICacheSets.PickRandom());
 					}
 					if(property.Name == "lg2ICacheLineSize") 
 					{
-						property.SetValue(cromozom, CromozomValues.lg2ICacheLineSize [rand.Next (0, 3)]);
+						property.SetValue(cromozom, CromozomValues.lg2ICacheLineSize.PickRandom());
 					}
 					if(property.Name == "ICachePenalty") 
 					{
-						property.SetValue(cromozom, CromozomValues.ICachePenalty [rand.Next (0, 3)]);
+						property.SetValue(cromozom, CromozomValues.ICachePenalty.PickRandom());
 					}
 					if(property.Name == "NumCaches") 
 					{
-						property.SetValue(cromozom, CromozomValues.NumCaches [rand.Next (0, 3)]);
+						property.SetValue(cromozom, CromozomValues.NumCaches.PickRandom());
 					}
 					if(property.Name == "BranchStall") 
 					{
-						property.SetValue(cromozom, CromozomValues.BranchStall [rand.Next (0, 3)]);
+						property.SetValue(cromozom, CromozomValues.BranchStall.PickRandom());
 					}
 				}
 			}

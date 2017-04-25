@@ -90,6 +90,8 @@
     <Compile Include="GeneticAlgorithm\GeneticAlgorithm.cs" />
     <Compile Include="GeneticAlgorithm\Entities\GeneticAlgorithmOptions.cs" />
     <Compile Include="GeneticAlgorithm\Entities\AlgorithmSelectionMode.cs" />
+    <Compile Include="EnumerableExtensions.cs" />
+    <Compile Include="ArrayExtensions.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
