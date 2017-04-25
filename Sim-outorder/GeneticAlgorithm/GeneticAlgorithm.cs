@@ -25,7 +25,7 @@ namespace Simoutorder
 			elitistPercent = geneticAlgorithmOptions.ElitesPercentage;
 			currentGeneration = 0;
 			Initialize algorithm = new Initialize ();
-			cromozomsPopulation = algorithm.GeneratePopulation (geneticAlgorithmOptions.NumberOfCromozoms);
+			cromozomsPopulation = algorithm.GeneratePopulation (geneticAlgorithmOptions);
 			int benchmarkCounter = 1;
 
 			while (currentGeneration < geneticAlgorithmOptions.NumberOfGenerations) 
@@ -153,7 +153,7 @@ namespace Simoutorder
 			{
 				if (rand.NextDouble () >= geneticAlgorithmOptions.MutationOccurance) 
 				{
-					ApplyMutation (cromozom);
+					cromozom.Mutate ();
 				}
 			}
 			tempFirstCromozom = newCromozomsPopulation [0];
@@ -190,7 +190,7 @@ namespace Simoutorder
 			{
 				if (rand.NextDouble () >= geneticAlgorithmOptions.MutationOccurance) 
 				{
-					ApplyMutation (cromozom);
+					cromozom.Mutate ();
 				}
 			}
 		}
@@ -216,89 +216,6 @@ namespace Simoutorder
 			resultSecondCromozom.GenerationNumber = currentGeneration + 1;
 			newCromozomsPopulation.Add (resultFirstCromozom);
 			newCromozomsPopulation.Add (resultSecondCromozom);
-		}
-
-		private void ApplyMutation (Cromozom cromozom)
-		{
-			PropertyInfo[] properties = typeof(Cromozom).GetProperties();
-			foreach (PropertyInfo property in properties)
-			{
-				if (rand.NextDouble () >= geneticAlgorithmOptions.MutationPercentage) 
-				{
-					if(property.Name == "CoreCkFreqValues") 
-					{
-						property.SetValue(cromozom, CromozomValues.CoreCkFreqValues.PickRandom());
-					}
-					if(property.Name == "BusCkFreq") 
-					{
-						property.SetValue(cromozom, CromozomValues.BusCkFreq.PickRandom());
-					}
-					if(property.Name == "lg2CacheSize") 
-					{
-						property.SetValue(cromozom, CromozomValues.lg2CacheSize.PickRandom());
-					}
-					if(property.Name == "lg2Sets") 
-					{
-						property.SetValue(cromozom, CromozomValues.lg2Sets.PickRandom());
-					}
-					if(property.Name == "lg2LineSize") 
-					{
-						property.SetValue(cromozom, CromozomValues.lg2LineSize.PickRandom());
-					}
-					if(property.Name == "MissPenalty") 
-					{
-						property.SetValue(cromozom, CromozomValues.MissPenalty.PickRandom());
-					}
-					if(property.Name == "WBPenalty") 
-					{
-						property.SetValue(cromozom, CromozomValues.WBPenalty.PickRandom());
-					}
-					if(property.Name == "lg2StrSize") 
-					{
-						property.SetValue(cromozom, CromozomValues.lg2StrSize.PickRandom());
-					}
-					if(property.Name == "lg2StrSets") 
-					{
-						property.SetValue(cromozom, CromozomValues.lg2StrSets.PickRandom());
-					}
-					if(property.Name == "lg2StrLineSize") 
-					{
-						property.SetValue(cromozom, CromozomValues.lg2StrLineSize.PickRandom());
-					}
-					if(property.Name == "StrMissPenalty") 
-					{
-						property.SetValue(cromozom, CromozomValues.StrMissPenalty.PickRandom());
-					}
-					if(property.Name == "StrWBPenalty") 
-					{
-						property.SetValue(cromozom, CromozomValues.StrWBPenalty.PickRandom());
-					}
-					if(property.Name == "lg2ICacheSize") 
-					{
-						property.SetValue(cromozom, CromozomValues.lg2ICacheSize.PickRandom());
-					}
-					if(property.Name == "lg2ICacheSets") 
-					{
-						property.SetValue(cromozom, CromozomValues.lg2ICacheSets.PickRandom());
-					}
-					if(property.Name == "lg2ICacheLineSize") 
-					{
-						property.SetValue(cromozom, CromozomValues.lg2ICacheLineSize.PickRandom());
-					}
-					if(property.Name == "ICachePenalty") 
-					{
-						property.SetValue(cromozom, CromozomValues.ICachePenalty.PickRandom());
-					}
-					if(property.Name == "NumCaches") 
-					{
-						property.SetValue(cromozom, CromozomValues.NumCaches.PickRandom());
-					}
-					if(property.Name == "BranchStall") 
-					{
-						property.SetValue(cromozom, CromozomValues.BranchStall.PickRandom());
-					}
-				}
-			}
 		}
 	}
 }

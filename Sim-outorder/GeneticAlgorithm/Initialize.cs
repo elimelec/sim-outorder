@@ -5,13 +5,12 @@ namespace Simoutorder
 {
 	public class Initialize
 	{
-		static Random random = new Random ();
-		public List<Cromozom> GeneratePopulation(int numberOfCromozoms) 
+		public List<Cromozom> GeneratePopulation(GeneticAlgorithmOptions options) 
 		{
 			List<Cromozom> PopulationList = new List<Cromozom> ();
 			int ct = 0;
-			while (ct < numberOfCromozoms) {
-				Cromozom cromozom = GenerateCromozom();
+			while (ct < options.NumberOfCromozoms) {
+				Cromozom cromozom = GenerateCromozom(options);
 				cromozom.Index = ct;
 				IOFunctions.CreateConfigFile(cromozom,ct.ToString());
 				PopulationList.Add (cromozom);
@@ -20,31 +19,32 @@ namespace Simoutorder
 			return PopulationList;
 		}
 
-		protected Cromozom GenerateCromozom() 
+		protected Cromozom GenerateCromozom(GeneticAlgorithmOptions options) 
 		{
 			Cromozom cromozom = new Cromozom ();
-			cromozom.CoreCkFreq = CromozomValues.CoreCkFreqValues.PickRandom();
-			cromozom.BusCkFreq = CromozomValues.BusCkFreq.PickRandom();
-			cromozom.lg2CacheSize = CromozomValues.lg2CacheSize.PickRandom();
-			cromozom.lg2Sets = CromozomValues.lg2Sets.PickRandom();
-			cromozom.lg2LineSize = CromozomValues.lg2LineSize.PickRandom();
-			cromozom.MissPenalty = CromozomValues.MissPenalty.PickRandom();
-			cromozom.WBPenalty = CromozomValues.WBPenalty.PickRandom();
-			cromozom.lg2StrSize = CromozomValues.lg2StrSize.PickRandom();
-			cromozom.lg2StrSets = CromozomValues.lg2StrSets.PickRandom();
-			cromozom.lg2StrLineSize = CromozomValues.lg2StrLineSize.PickRandom();
-			cromozom.StrMissPenalty = CromozomValues.StrMissPenalty.PickRandom();
-			cromozom.StrWBPenalty = CromozomValues.StrWBPenalty.PickRandom();
-			cromozom.lg2ICacheSize = CromozomValues.lg2ICacheSize.PickRandom();
-			cromozom.lg2ICacheSets = CromozomValues.lg2ICacheSets.PickRandom();
-			cromozom.lg2ICacheLineSize = CromozomValues.lg2ICacheLineSize.PickRandom();
-			cromozom.ICachePenalty = CromozomValues.ICachePenalty.PickRandom();
-			cromozom.NumCaches = CromozomValues.NumCaches.PickRandom();
-			cromozom.BranchStall = CromozomValues.BranchStall.PickRandom();
-			cromozom.StreamEnable = CromozomValues.StreamEnable;
-			cromozom.PrefetchEnable = CromozomValues.PrefetchEnable;
-			cromozom.LockEnable = CromozomValues.LockEnable;
-			cromozom.ProfGranularity = CromozomValues.ProfGranularity;
+			cromozom.MutationPercentage = options.MutationPercentage;
+			cromozom.Configuration.CoreCkFreq = CromozomValues.CoreCkFreqValues.PickRandom();
+			cromozom.Configuration.BusCkFreq = CromozomValues.BusCkFreq.PickRandom();
+			cromozom.Configuration.lg2CacheSize = CromozomValues.lg2CacheSize.PickRandom();
+			cromozom.Configuration.lg2Sets = CromozomValues.lg2Sets.PickRandom();
+			cromozom.Configuration.lg2LineSize = CromozomValues.lg2LineSize.PickRandom();
+			cromozom.Configuration.MissPenalty = CromozomValues.MissPenalty.PickRandom();
+			cromozom.Configuration.WBPenalty = CromozomValues.WBPenalty.PickRandom();
+			cromozom.Configuration.lg2StrSize = CromozomValues.lg2StrSize.PickRandom();
+			cromozom.Configuration.lg2StrSets = CromozomValues.lg2StrSets.PickRandom();
+			cromozom.Configuration.lg2StrLineSize = CromozomValues.lg2StrLineSize.PickRandom();
+			cromozom.Configuration.StrMissPenalty = CromozomValues.StrMissPenalty.PickRandom();
+			cromozom.Configuration.StrWBPenalty = CromozomValues.StrWBPenalty.PickRandom();
+			cromozom.Configuration.lg2ICacheSize = CromozomValues.lg2ICacheSize.PickRandom();
+			cromozom.Configuration.lg2ICacheSets = CromozomValues.lg2ICacheSets.PickRandom();
+			cromozom.Configuration.lg2ICacheLineSize = CromozomValues.lg2ICacheLineSize.PickRandom();
+			cromozom.Configuration.ICachePenalty = CromozomValues.ICachePenalty.PickRandom();
+			cromozom.Configuration.NumCaches = CromozomValues.NumCaches.PickRandom();
+			cromozom.Configuration.BranchStall = CromozomValues.BranchStall.PickRandom();
+			cromozom.Configuration.StreamEnable = CromozomValues.StreamEnable;
+			cromozom.Configuration.PrefetchEnable = CromozomValues.PrefetchEnable;
+			cromozom.Configuration.LockEnable = CromozomValues.LockEnable;
+			cromozom.Configuration.ProfGranularity = CromozomValues.ProfGranularity;
 			cromozom.Fitness = CromozomValues.Fitness;
 			cromozom.OptimizationLevel = CromozomValues.OptimizationLevel.PickRandom();
 			cromozom.Memory = CromozomValues.Memory.PickRandom();

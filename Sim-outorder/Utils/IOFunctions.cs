@@ -41,28 +41,28 @@ namespace Simoutorder
 		static List<string> GetCromozomProperties (Cromozom cromozom)
 		{
 			List<string> lines = new List<string> ();
-			lines.Add ("CoreCkFreq " + cromozom.CoreCkFreq);
-			lines.Add ("BusCkFreq " + cromozom.BusCkFreq);
-			lines.Add ("lg2CacheSize " + cromozom.lg2CacheSize);
-			lines.Add ("lg2Sets " + cromozom.lg2Sets);
-			lines.Add ("lg2LineSize " + cromozom.lg2LineSize);
-			lines.Add ("MissPenalty " + cromozom.MissPenalty);
-			lines.Add ("WBPenalty " + cromozom.WBPenalty);
-			lines.Add ("lg2StrSize " + cromozom.lg2StrSize);
-			lines.Add ("lg2StrSets " + cromozom.lg2StrSets);
-			lines.Add ("lg2StrLineSize " + cromozom.lg2StrLineSize);
-			lines.Add ("StrMissPenalty " + cromozom.StrMissPenalty);
-			lines.Add ("StrWBPenalty " + cromozom.StrWBPenalty);
-			lines.Add ("lg2ICacheSize " + cromozom.lg2ICacheSize);
-			lines.Add ("lg2ICacheSets " + cromozom.lg2ICacheSets);
-			lines.Add ("lg2ICacheLineSize " + cromozom.lg2ICacheLineSize);
-			lines.Add ("ICachePenalty " + cromozom.ICachePenalty);
-			lines.Add ("NumCaches " + cromozom.NumCaches);
-			lines.Add ("BranchStall " + cromozom.BranchStall);
-			lines.Add ("StreamEnable " + cromozom.StreamEnable);
-			lines.Add ("PrefetchEnable " + cromozom.PrefetchEnable);
-			lines.Add ("LockEnable " + cromozom.LockEnable);
-			lines.Add ("ProfGranularity " + cromozom.ProfGranularity);
+			lines.Add ("CoreCkFreq " + cromozom.Configuration.CoreCkFreq);
+			lines.Add ("BusCkFreq " + cromozom.Configuration.BusCkFreq);
+			lines.Add ("lg2CacheSize " + cromozom.Configuration.lg2CacheSize);
+			lines.Add ("lg2Sets " + cromozom.Configuration.lg2Sets);
+			lines.Add ("lg2LineSize " + cromozom.Configuration.lg2LineSize);
+			lines.Add ("MissPenalty " + cromozom.Configuration.MissPenalty);
+			lines.Add ("WBPenalty " + cromozom.Configuration.WBPenalty);
+			lines.Add ("lg2StrSize " + cromozom.Configuration.lg2StrSize);
+			lines.Add ("lg2StrSets " + cromozom.Configuration.lg2StrSets);
+			lines.Add ("lg2StrLineSize " + cromozom.Configuration.lg2StrLineSize);
+			lines.Add ("StrMissPenalty " + cromozom.Configuration.StrMissPenalty);
+			lines.Add ("StrWBPenalty " + cromozom.Configuration.StrWBPenalty);
+			lines.Add ("lg2ICacheSize " + cromozom.Configuration.lg2ICacheSize);
+			lines.Add ("lg2ICacheSets " + cromozom.Configuration.lg2ICacheSets);
+			lines.Add ("lg2ICacheLineSize " + cromozom.Configuration.lg2ICacheLineSize);
+			lines.Add ("ICachePenalty " + cromozom.Configuration.ICachePenalty);
+			lines.Add ("NumCaches " + cromozom.Configuration.NumCaches);
+			lines.Add ("BranchStall " + cromozom.Configuration.BranchStall);
+			lines.Add ("StreamEnable " + cromozom.Configuration.StreamEnable);
+			lines.Add ("PrefetchEnable " + cromozom.Configuration.PrefetchEnable);
+			lines.Add ("LockEnable " + cromozom.Configuration.LockEnable);
+			lines.Add ("ProfGranularity " + cromozom.Configuration.ProfGranularity);
 			return lines;
 		}
 	}
