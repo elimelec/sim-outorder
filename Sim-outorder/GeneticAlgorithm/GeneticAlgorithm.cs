@@ -37,7 +37,7 @@ namespace Simoutorder
 				{
 					for (int i = 0; i < cromozomsPopulation.Count; i++) 
 					{
-						ExecutaComandaSimulator(i, benchmark, cromozomsPopulation[i].Memory, cromozomsPopulation[i].OptimizationLevel);
+						ExecutaComandaSimulator(i, benchmark, cromozomsPopulation[i].Configuration.Memory, cromozomsPopulation[i].Configuration.OptimizationLevel);
 						proc.WaitForExit ();
 						CalculateFitness (i, benchmarkCounter);
 					}
@@ -200,20 +200,11 @@ namespace Simoutorder
 			Cromozom resultFirstCromozom = firstCromozom.DeepCopy();
 			Cromozom resultSecondCromozom = secondCromozom.DeepCopy();
 
-			PropertyInfo[] properties = typeof(Cromozom).GetProperties();
-			foreach (PropertyInfo property in properties)
-			{
-				if (rand.NextDouble () >= geneticAlgorithmOptions.CrossOverPercentage) 
-				{
-					if(property.Name != "Index" && property.Name != "Fitness" && property.Name != "GenerationNumber")
-					{
-						property.SetValue(resultFirstCromozom, property.GetValue(secondCromozom));
-						property.SetValue(resultSecondCromozom, property.GetValue(firstCromozom));
-					}
-				}
-			}
+			resultFirstCromozom.CrossOver (resultSecondCromozom);
+
 			resultFirstCromozom.GenerationNumber = currentGeneration + 1;
 			resultSecondCromozom.GenerationNumber = currentGeneration + 1;
+
 			newCromozomsPopulation.Add (resultFirstCromozom);
 			newCromozomsPopulation.Add (resultSecondCromozom);
 		}

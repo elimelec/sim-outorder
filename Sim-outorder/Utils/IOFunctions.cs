@@ -31,8 +31,8 @@ namespace Simoutorder
 		public static void CreateHistoryFile(Cromozom cromozom, int generationNumber) 
 		{
 			var lines = GetCromozomProperties (cromozom);
-			lines.Add ("Memory " + cromozom.Memory);
-			lines.Add ("Optimization Level " + cromozom.OptimizationLevel);
+			lines.Add ("Memory " + cromozom.Configuration.Memory);
+			lines.Add ("Optimization Level " + cromozom.Configuration.OptimizationLevel);
 			lines.Add ("IPC " + cromozom.Fitness);
 
 			System.IO.File.WriteAllLines("vex-3.43/share/apps/h264dec/test/History/cromozom_generation_" + generationNumber + ".txt", lines);

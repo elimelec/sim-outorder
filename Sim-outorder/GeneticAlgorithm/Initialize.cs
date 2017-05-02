@@ -22,7 +22,7 @@ namespace Simoutorder
 		protected Cromozom GenerateCromozom(GeneticAlgorithmOptions options) 
 		{
 			Cromozom cromozom = new Cromozom ();
-			cromozom.MutationPercentage = options.MutationPercentage;
+			cromozom.Options = options;
 			cromozom.Configuration.CoreCkFreq = CromozomValues.CoreCkFreqValues.PickRandom();
 			cromozom.Configuration.BusCkFreq = CromozomValues.BusCkFreq.PickRandom();
 			cromozom.Configuration.lg2CacheSize = CromozomValues.lg2CacheSize.PickRandom();
@@ -45,9 +45,9 @@ namespace Simoutorder
 			cromozom.Configuration.PrefetchEnable = CromozomValues.PrefetchEnable;
 			cromozom.Configuration.LockEnable = CromozomValues.LockEnable;
 			cromozom.Configuration.ProfGranularity = CromozomValues.ProfGranularity;
+			cromozom.Configuration.OptimizationLevel = CromozomValues.OptimizationLevel.PickRandom();
+			cromozom.Configuration.Memory = CromozomValues.Memory.PickRandom();
 			cromozom.Fitness = CromozomValues.Fitness;
-			cromozom.OptimizationLevel = CromozomValues.OptimizationLevel.PickRandom();
-			cromozom.Memory = CromozomValues.Memory.PickRandom();
 			cromozom.GenerationNumber = 0;
 			return cromozom;
 		}
