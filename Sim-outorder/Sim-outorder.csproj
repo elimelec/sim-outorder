@@ -99,5 +99,14 @@
     <Folder Include="Utils\" />
     <Folder Include="GeneticAlgorithm\" />
     <Folder Include="GeneticAlgorithm\Entities\" />
+    <Folder Include="cacti\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="cacti\cache.cfg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="cacti\cacti">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 </Project>
