@@ -6,7 +6,6 @@ namespace Simoutorder
 	{
 		public string OptimizationLevel;
 		public string Memory;
-		public double Fitness;
 		public int CoreCkFreq;
 		public int BusCkFreq;
 		public int lg2CacheSize;
