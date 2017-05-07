@@ -2,7 +2,7 @@ using System;
 
 namespace Simoutorder
 {
-	public class Configuration
+	public partial class Configuration
 	{
 		public string OptimizationLevel;
 		public string Memory;
