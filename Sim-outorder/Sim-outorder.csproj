@@ -102,9 +102,6 @@
     <Folder Include="cacti\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="cacti\cache.cfg">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
     <None Include="cacti\cacti">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
