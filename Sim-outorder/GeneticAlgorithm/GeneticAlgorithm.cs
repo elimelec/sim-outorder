@@ -30,7 +30,7 @@ namespace Simoutorder
 
 			while (currentGeneration < geneticAlgorithmOptions.NumberOfGenerations) 
 			{
-				IOFunctions.ClearFiles ("vex-3.43/bin/","ta.log*");
+				IOFunctions.ClearFiles ("./","ta.log*");
 				ClearPastFitness ();
 				benchmarkCounter = 1;
 				foreach (var benchmark in geneticAlgorithmOptions.Benchmarks) 
@@ -58,7 +58,7 @@ namespace Simoutorder
 					}
 
 					cromozomsPopulation = newCromozomsPopulation;
-					IOFunctions.ClearFiles ("vex-3.43/share/apps/h264dec/test/Configurations/","*cfg");
+					IOFunctions.ClearFiles ("vex/configurations/","*cfg");
 					for (int i = 0; i < cromozomsPopulation.Count; i++) {
 						IOFunctions.CreateConfigFile (cromozomsPopulation [i], i.ToString());
 					}
@@ -90,17 +90,29 @@ namespace Simoutorder
 
 		private void ExecutaComandaSimulator(int configurationNumber, string benchmark, string memory, string optimizationLevel)
 		{
+			var vexcfgFile = $@"vex/configurations/vex_{configurationNumber}.cfg";
+			var memoryFile = $@"vex/memories/{memory}";
+			var benchmarkPreFile = $@"vex/benchmarks/{benchmark}";
+
+			var exportCmd = $@"export VEXCFG=""{vexcfgFile}""";
+			var compileCmd = $@"vex/bin/cc -c -mas_t -fmm=""{memoryFile}"" {optimizationLevel} {benchmarkPreFile}.c";
+			var compileBasicMathCmd = $@"{compileCmd} vex/benchmarks/rad2deg.c vex/benchmarks/cubic.c vex/benchmarks/isqrt.c";
+			var linkCmd = $@"vex/bin/cc -o {benchmark} {benchmark}.o -lm";
+			var linkBasicMathCmd = $@"{linkCmd} rad2deg.o cubic.o isqrt.o -lm";
+			var runCmd = $@"./{benchmark}";
+
 			String command = "";
 			if (benchmark == "susan") {
-				command = "-c 'cd vex-3.43/bin && export VEXCFG=\"" + projectPath + "/vex-3.43/share/apps/h264dec/test/Configurations/vex_" + configurationNumber + ".cfg\" && ./cc -c -mas_t -fmm=\"" + projectPath + "/vex-3.43/share/apps/h264dec/test/Memories/" + memory + "\" " + optimizationLevel + " " + benchmark + ".c && ./cc -o " + benchmark + " " + benchmark + ".o -lm && ./" + benchmark + "'";
+				command = $@"-c '{exportCmd} && {compileCmd} && {linkCmd} && {runCmd}'";
 			}
 			if (benchmark == "basicmath_small" || benchmark == "basicmath_large") {
-				command = "-c 'cd vex-3.43/bin && export VEXCFG=\"" + projectPath + "/vex-3.43/share/apps/h264dec/test/Configurations/vex_" + configurationNumber + ".cfg\" && ./cc -c -mas_t -fmm=\"" + projectPath + "/vex-3.43/share/apps/h264dec/test/Memories/" + memory + "\" " + optimizationLevel + " " + benchmark + ".c rad2deg.c cubic.c isqrt.c && ./cc -o " + benchmark + " " + benchmark + ".o rad2deg.o cubic.o isqrt.o -lm && ./" + benchmark + "'";
+				command = $@"-c '{exportCmd} && {compileBasicMathCmd} && {linkBasicMathCmd} && {runCmd}'";
 			}
 
 			ProcessStartInfo procStartInfo = new ProcessStartInfo("/bin/bash", command);
 			procStartInfo.UseShellExecute = false;
 			procStartInfo.CreateNoWindow = true;
+			procStartInfo.RedirectStandardOutput = true;
 
 			proc = new Process();
 			proc.StartInfo = procStartInfo;
@@ -119,7 +131,7 @@ namespace Simoutorder
 			{
 				logNumber = ("00" + logNumber);
 			}
-			Dictionary<string,double> results = SearchInFile.GetSimulatorValuesByText (IOFunctions.GetLinesFromFile (@"vex-3.43/bin/ta.log." + logNumber), itemeDeCautat);
+			Dictionary<string,double> results = SearchInFile.GetSimulatorValuesByText (IOFunctions.GetLinesFromFile (@"ta.log." + logNumber), itemeDeCautat);
 			foreach (String item in itemeDeCautat) 
 			{
 				double adunare = (cromozomsPopulation [i].Fitness + results [item]);

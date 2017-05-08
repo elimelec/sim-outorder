@@ -25,7 +25,7 @@ namespace Simoutorder
 		{
 			var lines = GetCromozomProperties (cromozom);
 
-			System.IO.File.WriteAllLines("vex-3.43/share/apps/h264dec/test/Configurations/vex_" + configFileNumber + ".cfg", lines);
+			System.IO.File.WriteAllLines("vex/configurations/vex_" + configFileNumber + ".cfg", lines);
 		}
 
 		public static void CreateHistoryFile(Cromozom cromozom, int generationNumber) 
@@ -35,7 +35,8 @@ namespace Simoutorder
 			lines.Add ("Optimization Level " + cromozom.Configuration.OptimizationLevel);
 			lines.Add ("IPC " + cromozom.Fitness);
 
-			System.IO.File.WriteAllLines("vex-3.43/share/apps/h264dec/test/History/cromozom_generation_" + generationNumber + ".txt", lines);
+			Directory.CreateDirectory ("vex/history");
+			System.IO.File.WriteAllLines("vex/history/cromozom_generation_" + generationNumber + ".txt", lines);
 		}
 
 		static List<string> GetCromozomProperties (Cromozom cromozom)

@@ -1,1 +1,0 @@
-RES: IssueWidth 1

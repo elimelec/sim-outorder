@@ -18,8 +18,8 @@ public partial class MainWindow: Gtk.Window
 		MasterModel.AmIntratPeFormaDeParametriiCache = false;
 		image6.File = "soo.PNG";
 		this.Focus = button1;
-		IOFunctions.ClearFiles ("vex-3.43/bin/", "ta.log*");
-		IOFunctions.ClearFiles ("vex-3.43/share/apps/h264dec/test/Configurations/", "*cfg");
+		IOFunctions.ClearFiles ("./", "ta.log*");
+		IOFunctions.ClearFiles ("vex/configurations/", "*cfg");
 	}
 
 	protected void OnDeleteEvent (object sender, DeleteEventArgs a)
