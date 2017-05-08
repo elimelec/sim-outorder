@@ -188,6 +188,9 @@
     <None Include="vex\benchmarks\round.h">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <None Include="Sim-OutorderHelp.chm">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Content Include="vex\include\_ansi.h">
