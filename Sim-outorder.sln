@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sim-outorder", "Sim-outorder\Sim-outorder.csproj", "{885C44FE-E530-4F91-9F9D-40B4CF06EDC7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JMetalCSharp", "JMetalCSharp\JMetalCSharp.csproj", "{88B27C90-4C97-43D5-99D2-E1437DA8D154}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x86 = Debug|x86
@@ -13,5 +15,9 @@ Global
 		{885C44FE-E530-4F91-9F9D-40B4CF06EDC7}.Debug|x86.Build.0 = Debug|x86
 		{885C44FE-E530-4F91-9F9D-40B4CF06EDC7}.Release|x86.ActiveCfg = Release|x86
 		{885C44FE-E530-4F91-9F9D-40B4CF06EDC7}.Release|x86.Build.0 = Release|x86
+		{88B27C90-4C97-43D5-99D2-E1437DA8D154}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{88B27C90-4C97-43D5-99D2-E1437DA8D154}.Debug|x86.Build.0 = Debug|Any CPU
+		{88B27C90-4C97-43D5-99D2-E1437DA8D154}.Release|x86.ActiveCfg = Release|Any CPU
+		{88B27C90-4C97-43D5-99D2-E1437DA8D154}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

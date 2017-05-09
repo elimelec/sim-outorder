@@ -56,12 +56,6 @@
       <Package>gtk-sharp-2.0</Package>
     </Reference>
     <Reference Include="Mono.Posix" />
-    <Reference Include="JMetalCSharp">
-      <HintPath>dlls\JMetalCSharp.dll</HintPath>
-    </Reference>
-    <Reference Include="log4net">
-      <HintPath>dlls\log4net.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="gtk-gui\gui.stetic">
@@ -424,5 +418,11 @@
     <Content Include="soo.PNG">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\JMetalCSharp\JMetalCSharp.csproj">
+      <Project>{88B27C90-4C97-43D5-99D2-E1437DA8D154}</Project>
+      <Name>JMetalCSharp</Name>
+    </ProjectReference>
   </ItemGroup>
 </Project>
