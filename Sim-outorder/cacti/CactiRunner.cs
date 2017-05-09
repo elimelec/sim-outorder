@@ -7,13 +7,13 @@ using System.Collections.Generic;
 
 namespace Cacti
 {
-	public class Cacti
+	public class CactiRunner
 	{
 		public Configuration Configuration { get; set; }
 
 		public CactiStats Stats { get; set; }
 
-		public Cacti (Configuration configuration)
+		public CactiRunner (Configuration configuration)
 		{
 			Configuration = configuration;
 		}

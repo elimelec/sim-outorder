@@ -90,12 +90,12 @@
     <Compile Include="EnumerableExtensions.cs" />
     <Compile Include="ArrayExtensions.cs" />
     <Compile Include="GeneticAlgorithm\Entities\Configuration.cs" />
-    <Compile Include="cacti\Cacti.cs" />
     <Compile Include="cacti\Configuration.cs" />
     <Compile Include="cacti\CactiStats.cs" />
     <Compile Include="vex\VexRunner.cs" />
     <Compile Include="vex\VexStats.cs" />
     <Compile Include="vex\Configuration.cs" />
+    <Compile Include="cacti\CactiRunner.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
