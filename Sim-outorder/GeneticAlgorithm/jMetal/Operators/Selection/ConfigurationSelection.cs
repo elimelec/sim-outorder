@@ -4,7 +4,6 @@ using JMetalCSharp.Utils.Comparators;
 using System.Collections.Generic;
 using System;
 using System.Linq;
-using Simoutorder;
 
 namespace JMetalCSharp.Operators.Selection
 {
@@ -27,10 +26,8 @@ namespace JMetalCSharp.Operators.Selection
 			var bestArea = solutions.OrderBy (s => s.Objective [1]).First ();
 
 			if (JMetalRandom.NextDouble () > 0.5) {
-				solutions.Remove (bestPerformance);
 				return bestPerformance;
 			} else {
-				solutions.Remove (bestArea);
 				return bestArea;
 			}
 		}
