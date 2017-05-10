@@ -29,7 +29,7 @@ namespace Simoutorder
 		public bool LockEnable;
 		public string ProfGranularity;
 
-		public static Configuration New()
+		public static Configuration NewRadom()
 		{
 			var configuration = new Configuration ();
 
@@ -59,6 +59,11 @@ namespace Simoutorder
 			configuration.Memory = CromozomValues.Memory.PickRandom();
 
 			return configuration;
+		}
+
+		public Configuration DeepCopy()
+		{
+			return MemberwiseClone () as Configuration;
 		}
 	}
 }

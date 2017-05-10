@@ -92,6 +92,16 @@
     <Compile Include="GeneticAlgorithm\Entities\Configuration.cs" />
     <Compile Include="cacti\Configuration.cs" />
     <Compile Include="cacti\CactiStats.cs" />
+    <Compile Include="GeneticAlgorithm\jMetal\Encoding\Variable\Variable.cs" />
+    <Compile Include="GeneticAlgorithm\jMetal\Encoding\Variable\StringVariable.cs" />
+    <Compile Include="GeneticAlgorithm\jMetal\Encoding\Variable\IntVariable.cs" />
+    <Compile Include="GeneticAlgorithm\jMetal\Encoding\Variable\BooleanVariable.cs" />
+    <Compile Include="GeneticAlgorithm\jMetal\Operators\CrossOver\ConfigurationCrossOver.cs" />
+    <Compile Include="GeneticAlgorithm\jMetal\Operators\Mutation\ConfigurationMutation.cs" />
+    <Compile Include="GeneticAlgorithm\jMetal\Encoding\Variable\ConfigurationVariable.cs" />
+    <Compile Include="GeneticAlgorithm\jMetal\Encoding\SolutionType\ConfigurationSolutionType.cs" />
+    <Compile Include="GeneticAlgorithm\jMetal\Operators\Selection\ConfigurationSelection.cs" />
+    <Compile Include="GeneticAlgorithm\jMetal\Problems\ConfigurationProblem.cs" />
     <Compile Include="vex\VexRunner.cs" />
     <Compile Include="vex\VexStats.cs" />
     <Compile Include="vex\Configuration.cs" />
@@ -108,6 +118,15 @@
     <Folder Include="vex\include\machine\" />
     <Folder Include="vex\include\sys\" />
     <Folder Include="vex\benchmarks\" />
+    <Folder Include="GeneticAlgorithm\jMetal\" />
+    <Folder Include="GeneticAlgorithm\jMetal\Encoding\" />
+    <Folder Include="GeneticAlgorithm\jMetal\Encoding\Variable\" />
+    <Folder Include="GeneticAlgorithm\jMetal\Operators\" />
+    <Folder Include="GeneticAlgorithm\jMetal\Operators\CrossOver\" />
+    <Folder Include="GeneticAlgorithm\jMetal\Operators\Mutation\" />
+    <Folder Include="GeneticAlgorithm\jMetal\Problems\" />
+    <Folder Include="GeneticAlgorithm\jMetal\Encoding\SolutionType\" />
+    <Folder Include="GeneticAlgorithm\jMetal\Operators\Selection\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="cacti\cacti">

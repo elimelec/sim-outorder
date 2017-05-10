@@ -5,6 +5,18 @@ using System.Diagnostics;
 using System.Collections.Generic;
 using Gdk;
 
+using JMetalCSharp.Core;
+using JMetalCSharp.Operators.Crossover;
+using JMetalCSharp.Operators.Mutation;
+using JMetalCSharp.Operators.Selection;
+using JMetalCSharp.Problems;
+using JMetalCSharp.QualityIndicator;
+using JMetalCSharp.Utils;
+using JMetalCSharp.Metaheuristics.NSGAII;
+using JMetalCSharp.Encoding.SolutionType;
+using JMetalCSharp.Utils.Wrapper;
+
+
 public partial class MainWindow: Gtk.Window
 {
 	AlgorithmSelectionMode selectionMode = AlgorithmSelectionMode.Elitist;
@@ -152,6 +164,48 @@ public partial class MainWindow: Gtk.Window
 			break;
 		default:
 			throw new Exception ("Invalid selection: " + selectionMode);
+		}
+	}
+
+	public void RunSimulation(object sender, EventArgs e)
+	{
+		var problem = new ConfigurationProblem ();
+
+		var algorithm = new NSGAII (problem);
+
+		algorithm.SetInputParameter("populationSize", 50);
+		algorithm.SetInputParameter("maxEvaluations", 500);
+
+		// Mutation and Crossover for Real codification
+		var parameters = new Dictionary<string, object>();
+		parameters.Add(ConfigurationCrossOver.CrossOverPercentageKey, 0.5);
+		var crossover = new ConfigurationCrossOver (parameters); // Nobody cares about the factory
+
+		parameters = new Dictionary<string, object>();
+		parameters.Add (ConfigurationMutation.MutationPercentageKey, 0.5);
+		var mutation = new ConfigurationMutation (parameters); // Nobody cares about the factory.
+
+		// Selection Operator
+		parameters = null;
+		var selection = new ConfigurationSelection (parameters); // Nobody cares about the factory.
+
+		// Add the operators to the algorithm
+		algorithm.AddOperator("crossover", crossover);
+		algorithm.AddOperator("mutation", mutation);
+		algorithm.AddOperator("selection", selection);
+
+		// Add the indicator object to the algorithm
+		// nope
+		//algorithm.SetInputParameter("indicators", null);
+
+		var solution = algorithm.Execute ();
+
+		var solutionsList = solution.SolutionsList;
+
+		using (var writer = new System.IO.StreamWriter ("output.txt")) {
+			foreach (var sol in solutionsList) {
+				writer.WriteLine (sol.Objective [0] + "\t" + sol.Objective [1]);
+			}
 		}
 	}
 }

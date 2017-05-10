@@ -413,7 +413,7 @@ public partial class MainWindow
 		this.CacheParametersAction.Activated += new global::System.EventHandler (this.OnCacheParametersMenuItemActivated);
 		this.BpredParametersAction.Activated += new global::System.EventHandler (this.OnBpredParametersMenuItemActivated);
 		this.OutorderParametersAction.Activated += new global::System.EventHandler (this.OnParametersMenuItemActivated);
-		this.button1.Clicked += new global::System.EventHandler (this.TestComandaTerminal);
+		this.button1.Clicked += new global::System.EventHandler (this.RunSimulation);
 		this.rouletteRadioButton.Toggled += new global::System.EventHandler (this.OnRadiobutton1Toggled);
 		this.tournamentRadioButton.Toggled += new global::System.EventHandler (this.OnRadiobutton1Toggled);
 		this.elitistRadioButton.Toggled += new global::System.EventHandler (this.OnRadiobutton1Toggled);
