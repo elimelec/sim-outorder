@@ -187,7 +187,7 @@ public partial class MainWindow: Gtk.Window
 
 		// Selection Operator
 		parameters = null;
-		var selection = new ConfigurationSelection (parameters); // Nobody cares about the factory.
+		var selection = new BinaryTournament2 (parameters); // Nobody cares about the factory.
 
 		// Add the operators to the algorithm
 		algorithm.AddOperator("crossover", crossover);
