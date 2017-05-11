@@ -169,20 +169,22 @@ public partial class MainWindow: Gtk.Window
 
 	public void RunSimulation(object sender, EventArgs e)
 	{
+		var options = CreateAlgorithmOptions ();
+
 		var problem = new ConfigurationProblem ();
 
 		var algorithm = new NSGAII (problem);
 
-		algorithm.SetInputParameter("populationSize", 10);
-		algorithm.SetInputParameter("maxEvaluations", 50);
+		algorithm.SetInputParameter("populationSize", options.NumberOfCromozoms);
+		algorithm.SetInputParameter("maxEvaluations", options.NumberOfCromozoms * options.NumberOfGenerations);
 
 		// Mutation and Crossover for Real codification
 		var parameters = new Dictionary<string, object>();
-		parameters.Add(ConfigurationCrossOver.CrossOverPercentageKey, 0.5);
+		parameters.Add(ConfigurationCrossOver.CrossOverPercentageKey, options.CrossOverPercentage);
 		var crossover = new ConfigurationCrossOver (parameters); // Nobody cares about the factory
 
 		parameters = new Dictionary<string, object>();
-		parameters.Add (ConfigurationMutation.MutationPercentageKey, 0.5);
+		parameters.Add (ConfigurationMutation.MutationPercentageKey, options.MutationPercentage);
 		var mutation = new ConfigurationMutation (parameters); // Nobody cares about the factory.
 
 		// Selection Operator
