@@ -173,8 +173,8 @@ public partial class MainWindow: Gtk.Window
 
 		var algorithm = new NSGAII (problem);
 
-		algorithm.SetInputParameter("populationSize", 50);
-		algorithm.SetInputParameter("maxEvaluations", 500);
+		algorithm.SetInputParameter("populationSize", 10);
+		algorithm.SetInputParameter("maxEvaluations", 50);
 
 		// Mutation and Crossover for Real codification
 		var parameters = new Dictionary<string, object>();
