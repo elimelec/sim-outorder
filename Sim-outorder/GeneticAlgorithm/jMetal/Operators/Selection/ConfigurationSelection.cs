@@ -26,10 +26,19 @@ namespace JMetalCSharp.Operators.Selection
 			var bestArea = solutions.OrderBy (s => s.Objective [1]).First ();
 
 			if (JMetalRandom.NextDouble () > 0.5) {
-				return bestPerformance;
+				return DeepCopy(bestPerformance);
 			} else {
-				return bestArea;
+				return DeepCopy(bestArea);
 			}
+		}
+
+		private Solution DeepCopy(Solution solution)
+		{
+			var copy = new Solution (solution);
+			for (var i = 0; i < solution.NumberOfVariables(); i++) {
+				copy.Variable [i] = solution.Variable [i].DeepCopy ();
+			}
+			return copy;
 		}
 	}
 }
