@@ -5,21 +5,21 @@ namespace Simoutorder
 	public static class CromozomValues
 	{
 		public static int[] CoreCkFreqValues = new int[100];
-		public static int[] BusCkFreq = new int[3]{500,500,500};
-		public static int[] lg2CacheSize = new int[3]{15,20,25}; 		// (CacheSize = 256k)
+		public static int[] BusCkFreq = new int[3]{400,500,600};
+		public static int[] lg2CacheSize = new int[]{15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25}; 		// (CacheSize = 256k)
 		public static int[] lg2Sets = new int[3]{0,1,2}; 		 		// (Sets = 4)
 		public static int[] lg2LineSize = new int[3]{6,7,8};   			// (LineSize = 32)
-		public static int[] MissPenalty = new int[3]{36,36,36};
-		public static int[] WBPenalty = new int[3]{33,33,33};
-		public static int[] lg2StrSize = new int[3]{9,9,9}; 	 		// (StrSize = 512)
-		public static int[] lg2StrSets = new int[3]{4,4,4};				// (StrSets = 16)
+		public static int[] MissPenalty = new int[3]{34,35,36};
+		public static int[] WBPenalty = new int[3]{33,34,35};
+		public static int[] lg2StrSize = new int[]{9}; 	 		// (StrSize = 512)
+		public static int[] lg2StrSets = new int[3]{2,3,4};				// (StrSets = 16)
 		public static int[] lg2StrLineSize = new int[3]{5,5,5};       	// (StrLineSize = 32)
-		public static int[] StrMissPenalty = new int[3]{36,36,36};
-		public static int[] StrWBPenalty = new int[3]{33,33,33};
-		public static int[] lg2ICacheSize = new int[3]{15,20,25};		// (ICacheSize = 32k)
+		public static int[] StrMissPenalty = new int[3]{34,35,36};
+		public static int[] StrWBPenalty = new int[3]{33,34,35};
+		public static int[] lg2ICacheSize = new int[]{15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25};		// (ICacheSize = 32k)
 		public static int[] lg2ICacheSets = new int[3]{0,1,2};        	// (ICacheSets = 1)
 		public static int[] lg2ICacheLineSize = new int[3]{6,7,8};  	// (ICacheLineSize = 64)
-		public static int[] ICachePenalty = new int[3]{45,45,45};
+		public static int[] ICachePenalty = new int[3]{43,44,45};
 		public static int[] NumCaches = new int[3]{1,1,1};
 		public static int[] BranchStall = new int[3]{1,1,1};
 		public static bool StreamEnable = false;
