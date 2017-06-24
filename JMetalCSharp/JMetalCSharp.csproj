@@ -96,7 +96,6 @@
     <Compile Include="Metaheuristics\MOEAD\MOEAD_DRA.cs" />
     <Compile Include="Metaheuristics\MOEAD\PMOEAD.cs" />
     <Compile Include="Metaheuristics\MOEAD\Utils.cs" />
-    <Compile Include="Metaheuristics\NSGAII\NSGAII.cs" />
     <Compile Include="Metaheuristics\NSGAII\NSGAIIAdaptive.cs" />
     <Compile Include="Metaheuristics\NSGAII\NSGAIIRandom.cs" />
     <Compile Include="Metaheuristics\NSGAII\PNSGAII.cs" />

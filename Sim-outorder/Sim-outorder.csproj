@@ -106,6 +106,7 @@
     <Compile Include="vex\VexStats.cs" />
     <Compile Include="vex\Configuration.cs" />
     <Compile Include="cacti\CactiRunner.cs" />
+    <Compile Include="GeneticAlgorithm\jMetal\NSGAII.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>

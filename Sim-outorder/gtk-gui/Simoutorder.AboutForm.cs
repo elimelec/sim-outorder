@@ -12,17 +12,11 @@ namespace Simoutorder
 		
 		private global::Gtk.Label label7;
 		
-		private global::Gtk.Label label8;
-		
 		private global::Gtk.Label label9;
 		
 		private global::Gtk.Label label10;
 		
 		private global::Gtk.Image image85;
-		
-		private global::Gtk.Label label2;
-		
-		private global::Gtk.Label label1;
 
 		protected virtual void Build ()
 		{
@@ -39,7 +33,7 @@ namespace Simoutorder
 			// Container child fixed1.Gtk.Fixed+FixedChild
 			this.label5 = new global::Gtk.Label ();
 			this.label5.Name = "label5";
-			this.label5.LabelProp = global::Mono.Unix.Catalog.GetString ("Version: Alpha");
+			this.label5.LabelProp = global::Mono.Unix.Catalog.GetString ("Version: Beta");
 			this.fixed1.Add (this.label5);
 			global::Gtk.Fixed.FixedChild w1 = ((global::Gtk.Fixed.FixedChild)(this.fixed1 [this.label5]));
 			w1.X = 20;
@@ -55,58 +49,34 @@ namespace Simoutorder
 			// Container child fixed1.Gtk.Fixed+FixedChild
 			this.label7 = new global::Gtk.Label ();
 			this.label7.Name = "label7";
-			this.label7.LabelProp = global::Mono.Unix.Catalog.GetString ("Razvan GHENA");
+			this.label7.LabelProp = global::Mono.Unix.Catalog.GetString ("Elimelec Burghelea");
 			this.fixed1.Add (this.label7);
 			global::Gtk.Fixed.FixedChild w3 = ((global::Gtk.Fixed.FixedChild)(this.fixed1 [this.label7]));
 			w3.X = 32;
 			w3.Y = 145;
 			// Container child fixed1.Gtk.Fixed+FixedChild
-			this.label8 = new global::Gtk.Label ();
-			this.label8.Name = "label8";
-			this.label8.LabelProp = global::Mono.Unix.Catalog.GetString ("Ciprian MIHAIU");
-			this.fixed1.Add (this.label8);
-			global::Gtk.Fixed.FixedChild w4 = ((global::Gtk.Fixed.FixedChild)(this.fixed1 [this.label8]));
-			w4.X = 32;
-			w4.Y = 169;
-			// Container child fixed1.Gtk.Fixed+FixedChild
 			this.label9 = new global::Gtk.Label ();
 			this.label9.Name = "label9";
 			this.label9.LabelProp = global::Mono.Unix.Catalog.GetString ("Coordinator:");
 			this.fixed1.Add (this.label9);
-			global::Gtk.Fixed.FixedChild w5 = ((global::Gtk.Fixed.FixedChild)(this.fixed1 [this.label9]));
-			w5.X = 22;
-			w5.Y = 205;
+			global::Gtk.Fixed.FixedChild w4 = ((global::Gtk.Fixed.FixedChild)(this.fixed1 [this.label9]));
+			w4.X = 22;
+			w4.Y = 205;
 			// Container child fixed1.Gtk.Fixed+FixedChild
 			this.label10 = new global::Gtk.Label ();
 			this.label10.Name = "label10";
 			this.label10.LabelProp = global::Mono.Unix.Catalog.GetString ("Conf. univ. dr. ing. Adrian FLOREA");
 			this.fixed1.Add (this.label10);
-			global::Gtk.Fixed.FixedChild w6 = ((global::Gtk.Fixed.FixedChild)(this.fixed1 [this.label10]));
-			w6.X = 33;
-			w6.Y = 235;
+			global::Gtk.Fixed.FixedChild w5 = ((global::Gtk.Fixed.FixedChild)(this.fixed1 [this.label10]));
+			w5.X = 33;
+			w5.Y = 235;
 			// Container child fixed1.Gtk.Fixed+FixedChild
 			this.image85 = new global::Gtk.Image ();
 			this.image85.Name = "image85";
 			this.fixed1.Add (this.image85);
-			global::Gtk.Fixed.FixedChild w7 = ((global::Gtk.Fixed.FixedChild)(this.fixed1 [this.image85]));
-			w7.X = 15;
-			w7.Y = 17;
-			// Container child fixed1.Gtk.Fixed+FixedChild
-			this.label2 = new global::Gtk.Label ();
-			this.label2.Name = "label2";
-			this.label2.LabelProp = global::Mono.Unix.Catalog.GetString ("Ciprian DRAGHICI");
-			this.fixed1.Add (this.label2);
-			global::Gtk.Fixed.FixedChild w8 = ((global::Gtk.Fixed.FixedChild)(this.fixed1 [this.label2]));
-			w8.X = 167;
-			w8.Y = 169;
-			// Container child fixed1.Gtk.Fixed+FixedChild
-			this.label1 = new global::Gtk.Label ();
-			this.label1.Name = "label1";
-			this.label1.LabelProp = global::Mono.Unix.Catalog.GetString ("Florin NEMES");
-			this.fixed1.Add (this.label1);
-			global::Gtk.Fixed.FixedChild w9 = ((global::Gtk.Fixed.FixedChild)(this.fixed1 [this.label1]));
-			w9.X = 168;
-			w9.Y = 146;
+			global::Gtk.Fixed.FixedChild w6 = ((global::Gtk.Fixed.FixedChild)(this.fixed1 [this.image85]));
+			w6.X = 15;
+			w6.Y = 17;
 			this.Add (this.fixed1);
 			if ((this.Child != null)) {
 				this.Child.ShowAll ();

@@ -1,5 +1,8 @@
 ﻿using System;
 using Simoutorder;
+using System.Collections;
+using System.Linq;
+using System.Collections.Generic;
 
 using JMetalCSharp.Core;
 using JMetalCSharp.Operators.Crossover;
@@ -24,6 +27,8 @@ namespace JMetalCSharp.Encoding.SolutionType
 
 		public ConfigurationSolutionType (Problem problem) : base(problem)
 		{ }
+
+
 
 		public override Core.Variable[] CreateVariables ()
 		{

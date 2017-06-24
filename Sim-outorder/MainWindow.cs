@@ -204,10 +204,41 @@ public partial class MainWindow: Gtk.Window
 
 		var solutionsList = solution.SolutionsList;
 
+		var output = "";
 		using (var writer = new System.IO.StreamWriter ("output.txt")) {
 			foreach (var sol in solutionsList) {
-				writer.WriteLine (sol.Objective [0] + "\t" + sol.Objective [1]);
+				var line = sol.Objective [0] + "\t" + sol.Objective [1];
+				output += line;
+				output += "\n";
+				writer.WriteLine (line);
+			}
+
+			output += "\n";
+			output += "\n";
+			writer.WriteLine ();
+			writer.WriteLine ();
+
+			var rank = new Ranking (solution);
+			var n = rank.GetNumberOfSubfronts();
+			for (var i = 0; i < n; i++) {
+				var f = rank.GetSubfront (i);
+				foreach (var sol in f.SolutionsList) {
+					var line = sol.Objective [0] + "\t" + sol.Objective [1];
+					output += line;
+					output += "\n";
+					writer.WriteLine (line);
+				}
+
+				output += "\n";
+				output += "\n";
+				writer.WriteLine ();
+				writer.WriteLine ();
 			}
 		}
+
+		resultsText.Buffer.Clear ();
+		resultsText.Buffer.Text = output;
+
+
 	}
 }
