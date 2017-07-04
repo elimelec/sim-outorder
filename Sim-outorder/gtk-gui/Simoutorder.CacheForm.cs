@@ -221,7 +221,6 @@ namespace Simoutorder
 			this.CacheDl1TextBox.Name = "CacheDl1TextBox";
 			this.CacheDl1TextBox.Text = global::Mono.Unix.Catalog.GetString ("dl1");
 			this.CacheDl1TextBox.IsEditable = true;
-			this.CacheDl1TextBox.InvisibleChar = '•';
 			this.fixed1.Add (this.CacheDl1TextBox);
 			global::Gtk.Fixed.FixedChild w8 = ((global::Gtk.Fixed.FixedChild)(this.fixed1 [this.CacheDl1TextBox]));
 			w8.X = 90;
@@ -232,7 +231,6 @@ namespace Simoutorder
 			this.CacheDl1NsetsTextBox.Name = "CacheDl1NsetsTextBox";
 			this.CacheDl1NsetsTextBox.Text = global::Mono.Unix.Catalog.GetString ("256");
 			this.CacheDl1NsetsTextBox.IsEditable = true;
-			this.CacheDl1NsetsTextBox.InvisibleChar = '•';
 			this.fixed1.Add (this.CacheDl1NsetsTextBox);
 			global::Gtk.Fixed.FixedChild w9 = ((global::Gtk.Fixed.FixedChild)(this.fixed1 [this.CacheDl1NsetsTextBox]));
 			w9.X = 90;
@@ -243,7 +241,6 @@ namespace Simoutorder
 			this.CacheDl1BsizeTextBox.Name = "CacheDl1BsizeTextBox";
 			this.CacheDl1BsizeTextBox.Text = global::Mono.Unix.Catalog.GetString ("32");
 			this.CacheDl1BsizeTextBox.IsEditable = true;
-			this.CacheDl1BsizeTextBox.InvisibleChar = '•';
 			this.fixed1.Add (this.CacheDl1BsizeTextBox);
 			global::Gtk.Fixed.FixedChild w10 = ((global::Gtk.Fixed.FixedChild)(this.fixed1 [this.CacheDl1BsizeTextBox]));
 			w10.X = 90;
@@ -254,7 +251,6 @@ namespace Simoutorder
 			this.CacheDl1AssocTextBox.Name = "CacheDl1AssocTextBox";
 			this.CacheDl1AssocTextBox.Text = global::Mono.Unix.Catalog.GetString ("1");
 			this.CacheDl1AssocTextBox.IsEditable = true;
-			this.CacheDl1AssocTextBox.InvisibleChar = '•';
 			this.fixed1.Add (this.CacheDl1AssocTextBox);
 			global::Gtk.Fixed.FixedChild w11 = ((global::Gtk.Fixed.FixedChild)(this.fixed1 [this.CacheDl1AssocTextBox]));
 			w11.X = 90;
@@ -274,7 +270,6 @@ namespace Simoutorder
 			this.CacheDl1ReplTextBox.Name = "CacheDl1ReplTextBox";
 			this.CacheDl1ReplTextBox.Text = global::Mono.Unix.Catalog.GetString ("l");
 			this.CacheDl1ReplTextBox.IsEditable = true;
-			this.CacheDl1ReplTextBox.InvisibleChar = '•';
 			this.fixed1.Add (this.CacheDl1ReplTextBox);
 			global::Gtk.Fixed.FixedChild w13 = ((global::Gtk.Fixed.FixedChild)(this.fixed1 [this.CacheDl1ReplTextBox]));
 			w13.X = 90;
@@ -347,7 +342,6 @@ namespace Simoutorder
 			this.CacheIl1TextBox.Name = "CacheIl1TextBox";
 			this.CacheIl1TextBox.Text = global::Mono.Unix.Catalog.GetString ("il1");
 			this.CacheIl1TextBox.IsEditable = true;
-			this.CacheIl1TextBox.InvisibleChar = '•';
 			this.fixed1.Add (this.CacheIl1TextBox);
 			global::Gtk.Fixed.FixedChild w21 = ((global::Gtk.Fixed.FixedChild)(this.fixed1 [this.CacheIl1TextBox]));
 			w21.X = 365;
@@ -358,7 +352,6 @@ namespace Simoutorder
 			this.CacheIl1NsetsTextBox.Name = "CacheIl1NsetsTextBox";
 			this.CacheIl1NsetsTextBox.Text = global::Mono.Unix.Catalog.GetString ("256");
 			this.CacheIl1NsetsTextBox.IsEditable = true;
-			this.CacheIl1NsetsTextBox.InvisibleChar = '•';
 			this.fixed1.Add (this.CacheIl1NsetsTextBox);
 			global::Gtk.Fixed.FixedChild w22 = ((global::Gtk.Fixed.FixedChild)(this.fixed1 [this.CacheIl1NsetsTextBox]));
 			w22.X = 365;
@@ -369,7 +362,6 @@ namespace Simoutorder
 			this.CacheIl1ReplTextBox.Name = "CacheIl1ReplTextBox";
 			this.CacheIl1ReplTextBox.Text = global::Mono.Unix.Catalog.GetString ("l");
 			this.CacheIl1ReplTextBox.IsEditable = true;
-			this.CacheIl1ReplTextBox.InvisibleChar = '•';
 			this.fixed1.Add (this.CacheIl1ReplTextBox);
 			global::Gtk.Fixed.FixedChild w23 = ((global::Gtk.Fixed.FixedChild)(this.fixed1 [this.CacheIl1ReplTextBox]));
 			w23.X = 364;
@@ -380,7 +372,6 @@ namespace Simoutorder
 			this.CacheIl1AssocTextBox.Name = "CacheIl1AssocTextBox";
 			this.CacheIl1AssocTextBox.Text = global::Mono.Unix.Catalog.GetString ("1");
 			this.CacheIl1AssocTextBox.IsEditable = true;
-			this.CacheIl1AssocTextBox.InvisibleChar = '•';
 			this.fixed1.Add (this.CacheIl1AssocTextBox);
 			global::Gtk.Fixed.FixedChild w24 = ((global::Gtk.Fixed.FixedChild)(this.fixed1 [this.CacheIl1AssocTextBox]));
 			w24.X = 364;
@@ -391,7 +382,6 @@ namespace Simoutorder
 			this.CacheIl1BsizeTextBox.Name = "CacheIl1BsizeTextBox";
 			this.CacheIl1BsizeTextBox.Text = global::Mono.Unix.Catalog.GetString ("32");
 			this.CacheIl1BsizeTextBox.IsEditable = true;
-			this.CacheIl1BsizeTextBox.InvisibleChar = '•';
 			this.fixed1.Add (this.CacheIl1BsizeTextBox);
 			global::Gtk.Fixed.FixedChild w25 = ((global::Gtk.Fixed.FixedChild)(this.fixed1 [this.CacheIl1BsizeTextBox]));
 			w25.X = 364;
@@ -402,7 +392,6 @@ namespace Simoutorder
 			this.CacheTlbDataTextBox.Name = "CacheTlbDataTextBox";
 			this.CacheTlbDataTextBox.Text = global::Mono.Unix.Catalog.GetString ("dtlb");
 			this.CacheTlbDataTextBox.IsEditable = true;
-			this.CacheTlbDataTextBox.InvisibleChar = '•';
 			this.fixed1.Add (this.CacheTlbDataTextBox);
 			global::Gtk.Fixed.FixedChild w26 = ((global::Gtk.Fixed.FixedChild)(this.fixed1 [this.CacheTlbDataTextBox]));
 			w26.X = 639;
@@ -413,7 +402,6 @@ namespace Simoutorder
 			this.CacheTlbDataNsetsTextBox.Name = "CacheTlbDataNsetsTextBox";
 			this.CacheTlbDataNsetsTextBox.Text = global::Mono.Unix.Catalog.GetString ("32");
 			this.CacheTlbDataNsetsTextBox.IsEditable = true;
-			this.CacheTlbDataNsetsTextBox.InvisibleChar = '•';
 			this.fixed1.Add (this.CacheTlbDataNsetsTextBox);
 			global::Gtk.Fixed.FixedChild w27 = ((global::Gtk.Fixed.FixedChild)(this.fixed1 [this.CacheTlbDataNsetsTextBox]));
 			w27.X = 639;
@@ -424,7 +412,6 @@ namespace Simoutorder
 			this.CacheTlbDataBsizeTextBox.Name = "CacheTlbDataBsizeTextBox";
 			this.CacheTlbDataBsizeTextBox.Text = global::Mono.Unix.Catalog.GetString ("4096");
 			this.CacheTlbDataBsizeTextBox.IsEditable = true;
-			this.CacheTlbDataBsizeTextBox.InvisibleChar = '•';
 			this.fixed1.Add (this.CacheTlbDataBsizeTextBox);
 			global::Gtk.Fixed.FixedChild w28 = ((global::Gtk.Fixed.FixedChild)(this.fixed1 [this.CacheTlbDataBsizeTextBox]));
 			w28.X = 639;
@@ -435,7 +422,6 @@ namespace Simoutorder
 			this.CacheTlbDataAssocTextBox.Name = "CacheTlbDataAssocTextBox";
 			this.CacheTlbDataAssocTextBox.Text = global::Mono.Unix.Catalog.GetString ("4");
 			this.CacheTlbDataAssocTextBox.IsEditable = true;
-			this.CacheTlbDataAssocTextBox.InvisibleChar = '•';
 			this.fixed1.Add (this.CacheTlbDataAssocTextBox);
 			global::Gtk.Fixed.FixedChild w29 = ((global::Gtk.Fixed.FixedChild)(this.fixed1 [this.CacheTlbDataAssocTextBox]));
 			w29.X = 639;
@@ -446,7 +432,6 @@ namespace Simoutorder
 			this.CacheTlbDataReplTextBox.Name = "CacheTlbDataReplTextBox";
 			this.CacheTlbDataReplTextBox.Text = global::Mono.Unix.Catalog.GetString ("l");
 			this.CacheTlbDataReplTextBox.IsEditable = true;
-			this.CacheTlbDataReplTextBox.InvisibleChar = '•';
 			this.fixed1.Add (this.CacheTlbDataReplTextBox);
 			global::Gtk.Fixed.FixedChild w30 = ((global::Gtk.Fixed.FixedChild)(this.fixed1 [this.CacheTlbDataReplTextBox]));
 			w30.X = 639;
@@ -534,7 +519,6 @@ namespace Simoutorder
 			this.CacheDl2TextBox.Name = "CacheDl2TextBox";
 			this.CacheDl2TextBox.Text = global::Mono.Unix.Catalog.GetString ("dl2");
 			this.CacheDl2TextBox.IsEditable = true;
-			this.CacheDl2TextBox.InvisibleChar = '•';
 			this.fixed1.Add (this.CacheDl2TextBox);
 			global::Gtk.Fixed.FixedChild w40 = ((global::Gtk.Fixed.FixedChild)(this.fixed1 [this.CacheDl2TextBox]));
 			w40.X = 90;
@@ -545,7 +529,6 @@ namespace Simoutorder
 			this.CacheIl2TextBox.Name = "CacheIl2TextBox";
 			this.CacheIl2TextBox.Text = global::Mono.Unix.Catalog.GetString ("il2");
 			this.CacheIl2TextBox.IsEditable = true;
-			this.CacheIl2TextBox.InvisibleChar = '•';
 			this.fixed1.Add (this.CacheIl2TextBox);
 			global::Gtk.Fixed.FixedChild w41 = ((global::Gtk.Fixed.FixedChild)(this.fixed1 [this.CacheIl2TextBox]));
 			w41.X = 364;
@@ -556,7 +539,6 @@ namespace Simoutorder
 			this.CacheTlbInstructionTextBox.Name = "CacheTlbInstructionTextBox";
 			this.CacheTlbInstructionTextBox.Text = global::Mono.Unix.Catalog.GetString ("itlb");
 			this.CacheTlbInstructionTextBox.IsEditable = true;
-			this.CacheTlbInstructionTextBox.InvisibleChar = '•';
 			this.fixed1.Add (this.CacheTlbInstructionTextBox);
 			global::Gtk.Fixed.FixedChild w42 = ((global::Gtk.Fixed.FixedChild)(this.fixed1 [this.CacheTlbInstructionTextBox]));
 			w42.X = 639;
@@ -614,7 +596,6 @@ namespace Simoutorder
 			this.CacheDl2NsetsTextBox.Name = "CacheDl2NsetsTextBox";
 			this.CacheDl2NsetsTextBox.Text = global::Mono.Unix.Catalog.GetString ("256");
 			this.CacheDl2NsetsTextBox.IsEditable = true;
-			this.CacheDl2NsetsTextBox.InvisibleChar = '•';
 			this.fixed1.Add (this.CacheDl2NsetsTextBox);
 			global::Gtk.Fixed.FixedChild w48 = ((global::Gtk.Fixed.FixedChild)(this.fixed1 [this.CacheDl2NsetsTextBox]));
 			w48.X = 90;
@@ -625,7 +606,6 @@ namespace Simoutorder
 			this.CacheDl2BsizeTextBox.Name = "CacheDl2BsizeTextBox";
 			this.CacheDl2BsizeTextBox.Text = global::Mono.Unix.Catalog.GetString ("32");
 			this.CacheDl2BsizeTextBox.IsEditable = true;
-			this.CacheDl2BsizeTextBox.InvisibleChar = '•';
 			this.fixed1.Add (this.CacheDl2BsizeTextBox);
 			global::Gtk.Fixed.FixedChild w49 = ((global::Gtk.Fixed.FixedChild)(this.fixed1 [this.CacheDl2BsizeTextBox]));
 			w49.X = 90;
@@ -636,7 +616,6 @@ namespace Simoutorder
 			this.CacheDl2AssocTextBox.Name = "CacheDl2AssocTextBox";
 			this.CacheDl2AssocTextBox.Text = global::Mono.Unix.Catalog.GetString ("1");
 			this.CacheDl2AssocTextBox.IsEditable = true;
-			this.CacheDl2AssocTextBox.InvisibleChar = '•';
 			this.fixed1.Add (this.CacheDl2AssocTextBox);
 			global::Gtk.Fixed.FixedChild w50 = ((global::Gtk.Fixed.FixedChild)(this.fixed1 [this.CacheDl2AssocTextBox]));
 			w50.X = 90;
@@ -647,7 +626,6 @@ namespace Simoutorder
 			this.CacheDl2ReplTextBox.Name = "CacheDl2ReplTextBox";
 			this.CacheDl2ReplTextBox.Text = global::Mono.Unix.Catalog.GetString ("l");
 			this.CacheDl2ReplTextBox.IsEditable = true;
-			this.CacheDl2ReplTextBox.InvisibleChar = '•';
 			this.fixed1.Add (this.CacheDl2ReplTextBox);
 			global::Gtk.Fixed.FixedChild w51 = ((global::Gtk.Fixed.FixedChild)(this.fixed1 [this.CacheDl2ReplTextBox]));
 			w51.X = 90;
@@ -658,7 +636,6 @@ namespace Simoutorder
 			this.CacheIl2NsetsTextBox.Name = "CacheIl2NsetsTextBox";
 			this.CacheIl2NsetsTextBox.Text = global::Mono.Unix.Catalog.GetString ("256");
 			this.CacheIl2NsetsTextBox.IsEditable = true;
-			this.CacheIl2NsetsTextBox.InvisibleChar = '•';
 			this.fixed1.Add (this.CacheIl2NsetsTextBox);
 			global::Gtk.Fixed.FixedChild w52 = ((global::Gtk.Fixed.FixedChild)(this.fixed1 [this.CacheIl2NsetsTextBox]));
 			w52.X = 364;
@@ -669,7 +646,6 @@ namespace Simoutorder
 			this.CacheIl2BsizeTextBox.Name = "CacheIl2BsizeTextBox";
 			this.CacheIl2BsizeTextBox.Text = global::Mono.Unix.Catalog.GetString ("32");
 			this.CacheIl2BsizeTextBox.IsEditable = true;
-			this.CacheIl2BsizeTextBox.InvisibleChar = '•';
 			this.fixed1.Add (this.CacheIl2BsizeTextBox);
 			global::Gtk.Fixed.FixedChild w53 = ((global::Gtk.Fixed.FixedChild)(this.fixed1 [this.CacheIl2BsizeTextBox]));
 			w53.X = 364;
@@ -680,7 +656,6 @@ namespace Simoutorder
 			this.CacheIl2AssocTextBox.Name = "CacheIl2AssocTextBox";
 			this.CacheIl2AssocTextBox.Text = global::Mono.Unix.Catalog.GetString ("1");
 			this.CacheIl2AssocTextBox.IsEditable = true;
-			this.CacheIl2AssocTextBox.InvisibleChar = '•';
 			this.fixed1.Add (this.CacheIl2AssocTextBox);
 			global::Gtk.Fixed.FixedChild w54 = ((global::Gtk.Fixed.FixedChild)(this.fixed1 [this.CacheIl2AssocTextBox]));
 			w54.X = 364;
@@ -691,7 +666,6 @@ namespace Simoutorder
 			this.CacheIl2ReplTextBox.Name = "CacheIl2ReplTextBox";
 			this.CacheIl2ReplTextBox.Text = global::Mono.Unix.Catalog.GetString ("l");
 			this.CacheIl2ReplTextBox.IsEditable = true;
-			this.CacheIl2ReplTextBox.InvisibleChar = '•';
 			this.fixed1.Add (this.CacheIl2ReplTextBox);
 			global::Gtk.Fixed.FixedChild w55 = ((global::Gtk.Fixed.FixedChild)(this.fixed1 [this.CacheIl2ReplTextBox]));
 			w55.X = 364;
@@ -702,7 +676,6 @@ namespace Simoutorder
 			this.CacheTlbInstructionNsetsTextBox.Name = "CacheTlbInstructionNsetsTextBox";
 			this.CacheTlbInstructionNsetsTextBox.Text = global::Mono.Unix.Catalog.GetString ("16");
 			this.CacheTlbInstructionNsetsTextBox.IsEditable = true;
-			this.CacheTlbInstructionNsetsTextBox.InvisibleChar = '•';
 			this.fixed1.Add (this.CacheTlbInstructionNsetsTextBox);
 			global::Gtk.Fixed.FixedChild w56 = ((global::Gtk.Fixed.FixedChild)(this.fixed1 [this.CacheTlbInstructionNsetsTextBox]));
 			w56.X = 639;
@@ -713,7 +686,6 @@ namespace Simoutorder
 			this.CacheTlbInstructionBsizeTextBox.Name = "CacheTlbInstructionBsizeTextBox";
 			this.CacheTlbInstructionBsizeTextBox.Text = global::Mono.Unix.Catalog.GetString ("4096");
 			this.CacheTlbInstructionBsizeTextBox.IsEditable = true;
-			this.CacheTlbInstructionBsizeTextBox.InvisibleChar = '•';
 			this.fixed1.Add (this.CacheTlbInstructionBsizeTextBox);
 			global::Gtk.Fixed.FixedChild w57 = ((global::Gtk.Fixed.FixedChild)(this.fixed1 [this.CacheTlbInstructionBsizeTextBox]));
 			w57.X = 639;
@@ -724,7 +696,6 @@ namespace Simoutorder
 			this.CacheTlbInstructionAssocTextBox.Name = "CacheTlbInstructionAssocTextBox";
 			this.CacheTlbInstructionAssocTextBox.Text = global::Mono.Unix.Catalog.GetString ("4");
 			this.CacheTlbInstructionAssocTextBox.IsEditable = true;
-			this.CacheTlbInstructionAssocTextBox.InvisibleChar = '•';
 			this.fixed1.Add (this.CacheTlbInstructionAssocTextBox);
 			global::Gtk.Fixed.FixedChild w58 = ((global::Gtk.Fixed.FixedChild)(this.fixed1 [this.CacheTlbInstructionAssocTextBox]));
 			w58.X = 639;
@@ -735,7 +706,6 @@ namespace Simoutorder
 			this.CacheTlbInstructionReplTextBox.Name = "CacheTlbInstructionReplTextBox";
 			this.CacheTlbInstructionReplTextBox.Text = global::Mono.Unix.Catalog.GetString ("l");
 			this.CacheTlbInstructionReplTextBox.IsEditable = true;
-			this.CacheTlbInstructionReplTextBox.InvisibleChar = '•';
 			this.fixed1.Add (this.CacheTlbInstructionReplTextBox);
 			global::Gtk.Fixed.FixedChild w59 = ((global::Gtk.Fixed.FixedChild)(this.fixed1 [this.CacheTlbInstructionReplTextBox]));
 			w59.X = 639;

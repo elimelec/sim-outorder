@@ -107,7 +107,6 @@ namespace Simoutorder
 			this.Bpred2levL1SizeTextBox.Name = "Bpred2levL1SizeTextBox";
 			this.Bpred2levL1SizeTextBox.Text = global::Mono.Unix.Catalog.GetString ("1");
 			this.Bpred2levL1SizeTextBox.IsEditable = true;
-			this.Bpred2levL1SizeTextBox.InvisibleChar = '•';
 			this.fixed2.Add (this.Bpred2levL1SizeTextBox);
 			global::Gtk.Fixed.FixedChild w7 = ((global::Gtk.Fixed.FixedChild)(this.fixed2 [this.Bpred2levL1SizeTextBox]));
 			w7.X = 127;
@@ -118,7 +117,6 @@ namespace Simoutorder
 			this.Bpred2levHistorySizeTextBox.Name = "Bpred2levHistorySizeTextBox";
 			this.Bpred2levHistorySizeTextBox.Text = global::Mono.Unix.Catalog.GetString ("8");
 			this.Bpred2levHistorySizeTextBox.IsEditable = true;
-			this.Bpred2levHistorySizeTextBox.InvisibleChar = '•';
 			this.fixed2.Add (this.Bpred2levHistorySizeTextBox);
 			global::Gtk.Fixed.FixedChild w8 = ((global::Gtk.Fixed.FixedChild)(this.fixed2 [this.Bpred2levHistorySizeTextBox]));
 			w8.X = 127;
@@ -129,7 +127,6 @@ namespace Simoutorder
 			this.Bpred2levL2SizeTextBox.Name = "Bpred2levL2SizeTextBox";
 			this.Bpred2levL2SizeTextBox.Text = global::Mono.Unix.Catalog.GetString ("1024");
 			this.Bpred2levL2SizeTextBox.IsEditable = true;
-			this.Bpred2levL2SizeTextBox.InvisibleChar = '•';
 			this.fixed2.Add (this.Bpred2levL2SizeTextBox);
 			global::Gtk.Fixed.FixedChild w9 = ((global::Gtk.Fixed.FixedChild)(this.fixed2 [this.Bpred2levL2SizeTextBox]));
 			w9.X = 127;
@@ -175,7 +172,6 @@ namespace Simoutorder
 			this.BpredBtbSetsTextBox.Name = "BpredBtbSetsTextBox";
 			this.BpredBtbSetsTextBox.Text = global::Mono.Unix.Catalog.GetString ("512");
 			this.BpredBtbSetsTextBox.IsEditable = true;
-			this.BpredBtbSetsTextBox.InvisibleChar = '•';
 			this.fixed2.Add (this.BpredBtbSetsTextBox);
 			global::Gtk.Fixed.FixedChild w14 = ((global::Gtk.Fixed.FixedChild)(this.fixed2 [this.BpredBtbSetsTextBox]));
 			w14.X = 126;
@@ -186,7 +182,6 @@ namespace Simoutorder
 			this.BpredBtbAssociativityTextBox.Name = "BpredBtbAssociativityTextBox";
 			this.BpredBtbAssociativityTextBox.Text = global::Mono.Unix.Catalog.GetString ("4");
 			this.BpredBtbAssociativityTextBox.IsEditable = true;
-			this.BpredBtbAssociativityTextBox.InvisibleChar = '•';
 			this.fixed2.Add (this.BpredBtbAssociativityTextBox);
 			global::Gtk.Fixed.FixedChild w15 = ((global::Gtk.Fixed.FixedChild)(this.fixed2 [this.BpredBtbAssociativityTextBox]));
 			w15.X = 126;
@@ -205,7 +200,6 @@ namespace Simoutorder
 			this.BpredBimodTextBox.Name = "BpredBimodTextBox";
 			this.BpredBimodTextBox.Text = global::Mono.Unix.Catalog.GetString ("2048");
 			this.BpredBimodTextBox.IsEditable = true;
-			this.BpredBimodTextBox.InvisibleChar = '•';
 			this.fixed2.Add (this.BpredBimodTextBox);
 			global::Gtk.Fixed.FixedChild w17 = ((global::Gtk.Fixed.FixedChild)(this.fixed2 [this.BpredBimodTextBox]));
 			w17.X = 126;

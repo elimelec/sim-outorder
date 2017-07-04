@@ -41,7 +41,7 @@ namespace Simoutorder
 			// Container child fixed1.Gtk.Fixed+FixedChild
 			this.label6 = new global::Gtk.Label ();
 			this.label6.Name = "label6";
-			this.label6.LabelProp = global::Mono.Unix.Catalog.GetString ("Authors:");
+			this.label6.LabelProp = global::Mono.Unix.Catalog.GetString ("Student:");
 			this.fixed1.Add (this.label6);
 			global::Gtk.Fixed.FixedChild w2 = ((global::Gtk.Fixed.FixedChild)(this.fixed1 [this.label6]));
 			w2.X = 21;
@@ -65,7 +65,7 @@ namespace Simoutorder
 			// Container child fixed1.Gtk.Fixed+FixedChild
 			this.label10 = new global::Gtk.Label ();
 			this.label10.Name = "label10";
-			this.label10.LabelProp = global::Mono.Unix.Catalog.GetString ("Conf. univ. dr. ing. Adrian FLOREA");
+			this.label10.LabelProp = global::Mono.Unix.Catalog.GetString ("Prof. dr. ing. Adrian FLOREA");
 			this.fixed1.Add (this.label10);
 			global::Gtk.Fixed.FixedChild w5 = ((global::Gtk.Fixed.FixedChild)(this.fixed1 [this.label10]));
 			w5.X = 33;

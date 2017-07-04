@@ -108,6 +108,9 @@ public partial class MainWindow
 		w1.Add (this.dialogQuestionAction, null);
 		this.EditAction = new global::Gtk.Action ("EditAction", global::Mono.Unix.Catalog.GetString ("Edit"), null, null);
 		this.EditAction.ShortLabel = global::Mono.Unix.Catalog.GetString ("Edit");
+		this.EditAction.Visible = false;
+		this.EditAction.VisibleHorizontal = false;
+		this.EditAction.VisibleVertical = false;
 		w1.Add (this.EditAction, null);
 		this.ParametersAction = new global::Gtk.Action ("ParametersAction", global::Mono.Unix.Catalog.GetString ("Parameters"), null, null);
 		this.ParametersAction.ShortLabel = global::Mono.Unix.Catalog.GetString ("Parameters");
@@ -137,7 +140,7 @@ public partial class MainWindow
 		this.vbox1.Name = "vbox1";
 		this.vbox1.Spacing = 6;
 		// Container child vbox1.Gtk.Box+BoxChild
-		this.UIManager.AddUiFromString ("<ui><menubar name='menubar1'><menu name='FileAction' action='FileAction'><menuitem name='ExitMenuItem' action='ExitMenuItem'/></menu><menu name='EditAction' action='EditAction'><menu name='ParametersAction' action='ParametersAction'><menuitem name='CacheParametersAction' action='CacheParametersAction'/><menuitem name='BpredParametersAction' action='BpredParametersAction'/><menuitem name='OutorderParametersAction' action='OutorderParametersAction'/></menu></menu><menu name='InfoAction' action='InfoAction'><menuitem name='dialogQuestionAction' action='dialogQuestionAction'/><menuitem name='AboutMenuItem' action='AboutMenuItem'/></menu></menubar></ui>");
+		this.UIManager.AddUiFromString ("<ui><menubar name='menubar1'><menu name='FileAction' action='FileAction'><menuitem name='ExitMenuItem' action='ExitMenuItem'/></menu><menu name='InfoAction' action='InfoAction'><menuitem name='dialogQuestionAction' action='dialogQuestionAction'/><menuitem name='AboutMenuItem' action='AboutMenuItem'/></menu></menubar></ui>");
 		this.menubar1 = ((global::Gtk.MenuBar)(this.UIManager.GetWidget ("/menubar1")));
 		this.menubar1.Name = "menubar1";
 		this.vbox1.Add (this.menubar1);
@@ -198,6 +201,7 @@ public partial class MainWindow
 		w7.Y = 109;
 		// Container child fixed2.Gtk.Fixed+FixedChild
 		this.basicmathSmallCheckBox = new global::Gtk.CheckButton ();
+		this.basicmathSmallCheckBox.Sensitive = false;
 		this.basicmathSmallCheckBox.CanFocus = true;
 		this.basicmathSmallCheckBox.Name = "basicmathSmallCheckBox";
 		this.basicmathSmallCheckBox.Label = global::Mono.Unix.Catalog.GetString ("BasicMath Small");
@@ -209,6 +213,7 @@ public partial class MainWindow
 		w8.Y = 134;
 		// Container child fixed2.Gtk.Fixed+FixedChild
 		this.basicmathLargeCheckBox = new global::Gtk.CheckButton ();
+		this.basicmathLargeCheckBox.Sensitive = false;
 		this.basicmathLargeCheckBox.CanFocus = true;
 		this.basicmathLargeCheckBox.Name = "basicmathLargeCheckBox";
 		this.basicmathLargeCheckBox.Label = global::Mono.Unix.Catalog.GetString ("BasicMath Large");
@@ -236,16 +241,16 @@ public partial class MainWindow
 		this.numberOfGenerations.InvisibleChar = '●';
 		this.fixed2.Add (this.numberOfGenerations);
 		global::Gtk.Fixed.FixedChild w11 = ((global::Gtk.Fixed.FixedChild)(this.fixed2 [this.numberOfGenerations]));
-		w11.X = 510;
-		w11.Y = 268;
+		w11.X = 755;
+		w11.Y = 234;
 		// Container child fixed2.Gtk.Fixed+FixedChild
 		this.label2 = new global::Gtk.Label ();
 		this.label2.Name = "label2";
-		this.label2.LabelProp = global::Mono.Unix.Catalog.GetString ("Number of Generations: ");
+		this.label2.LabelProp = global::Mono.Unix.Catalog.GetString ("Generations: ");
 		this.fixed2.Add (this.label2);
 		global::Gtk.Fixed.FixedChild w12 = ((global::Gtk.Fixed.FixedChild)(this.fixed2 [this.label2]));
-		w12.X = 348;
-		w12.Y = 272;
+		w12.X = 604;
+		w12.Y = 238;
 		// Container child fixed2.Gtk.Fixed+FixedChild
 		this.numberOfCromozoms = new global::Gtk.Entry ();
 		this.numberOfCromozoms.WidthRequest = 60;
@@ -256,7 +261,7 @@ public partial class MainWindow
 		this.numberOfCromozoms.InvisibleChar = '●';
 		this.fixed2.Add (this.numberOfCromozoms);
 		global::Gtk.Fixed.FixedChild w13 = ((global::Gtk.Fixed.FixedChild)(this.fixed2 [this.numberOfCromozoms]));
-		w13.X = 510;
+		w13.X = 530;
 		w13.Y = 232;
 		// Container child fixed2.Gtk.Fixed+FixedChild
 		this.label1 = new global::Gtk.Label ();
@@ -281,7 +286,7 @@ public partial class MainWindow
 		this.fixed2.Add (this.label6);
 		global::Gtk.Fixed.FixedChild w16 = ((global::Gtk.Fixed.FixedChild)(this.fixed2 [this.label6]));
 		w16.X = 348;
-		w16.Y = 308;
+		w16.Y = 278;
 		// Container child fixed2.Gtk.Fixed+FixedChild
 		this.crossoverPercentageTextBox = new global::Gtk.Entry ();
 		this.crossoverPercentageTextBox.WidthRequest = 60;
@@ -292,10 +297,11 @@ public partial class MainWindow
 		this.crossoverPercentageTextBox.InvisibleChar = '●';
 		this.fixed2.Add (this.crossoverPercentageTextBox);
 		global::Gtk.Fixed.FixedChild w17 = ((global::Gtk.Fixed.FixedChild)(this.fixed2 [this.crossoverPercentageTextBox]));
-		w17.X = 510;
-		w17.Y = 303;
+		w17.X = 530;
+		w17.Y = 274;
 		// Container child fixed2.Gtk.Fixed+FixedChild
 		this.rouletteRadioButton = new global::Gtk.RadioButton (global::Mono.Unix.Catalog.GetString ("Roulette Wheel"));
+		this.rouletteRadioButton.Sensitive = false;
 		this.rouletteRadioButton.CanFocus = true;
 		this.rouletteRadioButton.Name = "rouletteRadioButton";
 		this.rouletteRadioButton.DrawIndicator = true;
@@ -307,6 +313,7 @@ public partial class MainWindow
 		w18.Y = 161;
 		// Container child fixed2.Gtk.Fixed+FixedChild
 		this.tournamentRadioButton = new global::Gtk.RadioButton (global::Mono.Unix.Catalog.GetString ("Tournament"));
+		this.tournamentRadioButton.Sensitive = false;
 		this.tournamentRadioButton.CanFocus = true;
 		this.tournamentRadioButton.Name = "tournamentRadioButton";
 		this.tournamentRadioButton.DrawIndicator = true;
@@ -338,27 +345,27 @@ public partial class MainWindow
 		// Container child fixed2.Gtk.Fixed+FixedChild
 		this.label9 = new global::Gtk.Label ();
 		this.label9.Name = "label9";
-		this.label9.LabelProp = global::Mono.Unix.Catalog.GetString ("Mutation Occurance: ");
+		this.label9.LabelProp = global::Mono.Unix.Catalog.GetString ("Mutation Chance ");
 		this.fixed2.Add (this.label9);
 		global::Gtk.Fixed.FixedChild w22 = ((global::Gtk.Fixed.FixedChild)(this.fixed2 [this.label9]));
-		w22.X = 584;
-		w22.Y = 274;
+		w22.X = 604;
+		w22.Y = 280;
 		// Container child fixed2.Gtk.Fixed+FixedChild
 		this.label5 = new global::Gtk.Label ();
 		this.label5.Name = "label5";
 		this.label5.LabelProp = global::Mono.Unix.Catalog.GetString ("Elites Percentage: ");
 		this.fixed2.Add (this.label5);
 		global::Gtk.Fixed.FixedChild w23 = ((global::Gtk.Fixed.FixedChild)(this.fixed2 [this.label5]));
-		w23.X = 584;
-		w23.Y = 238;
+		w23.X = 604;
+		w23.Y = 315;
 		// Container child fixed2.Gtk.Fixed+FixedChild
 		this.label7 = new global::Gtk.Label ();
 		this.label7.Name = "label7";
-		this.label7.LabelProp = global::Mono.Unix.Catalog.GetString ("Gene Mut. Chance: ");
+		this.label7.LabelProp = global::Mono.Unix.Catalog.GetString ("Gene Mutation Chance: ");
 		this.fixed2.Add (this.label7);
 		global::Gtk.Fixed.FixedChild w24 = ((global::Gtk.Fixed.FixedChild)(this.fixed2 [this.label7]));
-		w24.X = 584;
-		w24.Y = 308;
+		w24.X = 348;
+		w24.Y = 318;
 		// Container child fixed2.Gtk.Fixed+FixedChild
 		this.elitesPercentageTextBox = new global::Gtk.Entry ();
 		this.elitesPercentageTextBox.WidthRequest = 60;
@@ -369,8 +376,8 @@ public partial class MainWindow
 		this.elitesPercentageTextBox.InvisibleChar = '●';
 		this.fixed2.Add (this.elitesPercentageTextBox);
 		global::Gtk.Fixed.FixedChild w25 = ((global::Gtk.Fixed.FixedChild)(this.fixed2 [this.elitesPercentageTextBox]));
-		w25.X = 721;
-		w25.Y = 233;
+		w25.X = 754;
+		w25.Y = 309;
 		// Container child fixed2.Gtk.Fixed+FixedChild
 		this.mutationOccuranceTextBox = new global::Gtk.Entry ();
 		this.mutationOccuranceTextBox.WidthRequest = 60;
@@ -381,8 +388,8 @@ public partial class MainWindow
 		this.mutationOccuranceTextBox.InvisibleChar = '●';
 		this.fixed2.Add (this.mutationOccuranceTextBox);
 		global::Gtk.Fixed.FixedChild w26 = ((global::Gtk.Fixed.FixedChild)(this.fixed2 [this.mutationOccuranceTextBox]));
-		w26.X = 721;
-		w26.Y = 267;
+		w26.X = 754;
+		w26.Y = 276;
 		// Container child fixed2.Gtk.Fixed+FixedChild
 		this.mutationPercentageTextBox = new global::Gtk.Entry ();
 		this.mutationPercentageTextBox.WidthRequest = 60;
@@ -393,8 +400,8 @@ public partial class MainWindow
 		this.mutationPercentageTextBox.InvisibleChar = '●';
 		this.fixed2.Add (this.mutationPercentageTextBox);
 		global::Gtk.Fixed.FixedChild w27 = ((global::Gtk.Fixed.FixedChild)(this.fixed2 [this.mutationPercentageTextBox]));
-		w27.X = 721;
-		w27.Y = 303;
+		w27.X = 530;
+		w27.Y = 312;
 		this.vbox1.Add (this.fixed2);
 		global::Gtk.Box.BoxChild w28 = ((global::Gtk.Box.BoxChild)(this.vbox1 [this.fixed2]));
 		w28.Position = 1;
@@ -402,9 +409,11 @@ public partial class MainWindow
 		if ((this.Child != null)) {
 			this.Child.ShowAll ();
 		}
-		this.DefaultWidth = 792;
+		this.DefaultWidth = 827;
 		this.DefaultHeight = 396;
 		this.elitistRadioButton.HasDefault = true;
+		this.label5.Hide ();
+		this.elitesPercentageTextBox.Hide ();
 		this.Show ();
 		this.DeleteEvent += new global::Gtk.DeleteEventHandler (this.OnDeleteEvent);
 		this.AboutMenuItem.Activated += new global::System.EventHandler (this.OnAboutMenuItemActivated);

@@ -7,7 +7,7 @@
     <widget-library name="glade-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />
     <widget-library name="../bin/Debug/Sim-outorder.exe" internal="true" />
   </import>
-  <widget class="Gtk.Window" id="MainWindow" design-size="792 396">
+  <widget class="Gtk.Window" id="MainWindow" design-size="827 396">
     <action-group name="Default">
       <action id="InfoAction">
         <property name="Type">Action</property>
@@ -43,6 +43,9 @@
         <property name="Type">Action</property>
         <property name="Label" translatable="yes">Edit</property>
         <property name="ShortLabel" translatable="yes">Edit</property>
+        <property name="Visible">False</property>
+        <property name="VisibleHorizontal">False</property>
+        <property name="VisibleVertical">False</property>
       </action>
       <action id="ParametersAction">
         <property name="Type">Action</property>
@@ -93,13 +96,6 @@
             <node name="menubar1" type="Menubar">
               <node type="Menu" action="FileAction">
                 <node type="Menuitem" action="ExitMenuItem" />
-              </node>
-              <node type="Menu" action="EditAction">
-                <node type="Menu" action="ParametersAction">
-                  <node type="Menuitem" action="CacheParametersAction" />
-                  <node type="Menuitem" action="BpredParametersAction" />
-                  <node type="Menuitem" action="OutorderParametersAction" />
-                </node>
               </node>
               <node type="Menu" action="InfoAction">
                 <node type="Menuitem" action="dialogQuestionAction" />
@@ -191,6 +187,7 @@
             <child>
               <widget class="Gtk.CheckButton" id="basicmathSmallCheckBox">
                 <property name="MemberName">benchmarkCheckBox</property>
+                <property name="Sensitive">False</property>
                 <property name="CanFocus">True</property>
                 <property name="Label" translatable="yes">BasicMath Small</property>
                 <property name="DrawIndicator">True</property>
@@ -205,6 +202,7 @@
             <child>
               <widget class="Gtk.CheckButton" id="basicmathLargeCheckBox">
                 <property name="MemberName">benchmarkCheckBox</property>
+                <property name="Sensitive">False</property>
                 <property name="CanFocus">True</property>
                 <property name="Label" translatable="yes">BasicMath Large</property>
                 <property name="DrawIndicator">True</property>
@@ -236,18 +234,18 @@
                 <property name="InvisibleChar">●</property>
               </widget>
               <packing>
-                <property name="X">510</property>
-                <property name="Y">268</property>
+                <property name="X">755</property>
+                <property name="Y">234</property>
               </packing>
             </child>
             <child>
               <widget class="Gtk.Label" id="label2">
                 <property name="MemberName" />
-                <property name="LabelProp" translatable="yes">Number of Generations: </property>
+                <property name="LabelProp" translatable="yes">Generations: </property>
               </widget>
               <packing>
-                <property name="X">348</property>
-                <property name="Y">272</property>
+                <property name="X">604</property>
+                <property name="Y">238</property>
               </packing>
             </child>
             <child>
@@ -260,7 +258,7 @@
                 <property name="InvisibleChar">●</property>
               </widget>
               <packing>
-                <property name="X">510</property>
+                <property name="X">530</property>
                 <property name="Y">232</property>
               </packing>
             </child>
@@ -291,7 +289,7 @@
               </widget>
               <packing>
                 <property name="X">348</property>
-                <property name="Y">308</property>
+                <property name="Y">278</property>
               </packing>
             </child>
             <child>
@@ -304,13 +302,14 @@
                 <property name="InvisibleChar">●</property>
               </widget>
               <packing>
-                <property name="X">510</property>
-                <property name="Y">303</property>
+                <property name="X">530</property>
+                <property name="Y">274</property>
               </packing>
             </child>
             <child>
               <widget class="Gtk.RadioButton" id="rouletteRadioButton">
                 <property name="MemberName" />
+                <property name="Sensitive">False</property>
                 <property name="CanFocus">True</property>
                 <property name="Label" translatable="yes">Roulette Wheel</property>
                 <property name="Active">True</property>
@@ -328,6 +327,7 @@
             <child>
               <widget class="Gtk.RadioButton" id="tournamentRadioButton">
                 <property name="MemberName" />
+                <property name="Sensitive">False</property>
                 <property name="CanFocus">True</property>
                 <property name="Label" translatable="yes">Tournament</property>
                 <property name="DrawIndicator">True</property>
@@ -371,45 +371,47 @@
             <child>
               <widget class="Gtk.Label" id="label9">
                 <property name="MemberName" />
-                <property name="LabelProp" translatable="yes">Mutation Occurance: </property>
+                <property name="LabelProp" translatable="yes">Mutation Chance </property>
               </widget>
               <packing>
-                <property name="X">584</property>
-                <property name="Y">274</property>
+                <property name="X">604</property>
+                <property name="Y">280</property>
               </packing>
             </child>
             <child>
               <widget class="Gtk.Label" id="label5">
                 <property name="MemberName" />
+                <property name="Visible">False</property>
                 <property name="LabelProp" translatable="yes">Elites Percentage: </property>
               </widget>
               <packing>
-                <property name="X">584</property>
-                <property name="Y">238</property>
+                <property name="X">604</property>
+                <property name="Y">315</property>
               </packing>
             </child>
             <child>
               <widget class="Gtk.Label" id="label7">
                 <property name="MemberName" />
-                <property name="LabelProp" translatable="yes">Gene Mut. Chance: </property>
+                <property name="LabelProp" translatable="yes">Gene Mutation Chance: </property>
               </widget>
               <packing>
-                <property name="X">584</property>
-                <property name="Y">308</property>
+                <property name="X">348</property>
+                <property name="Y">318</property>
               </packing>
             </child>
             <child>
               <widget class="Gtk.Entry" id="elitesPercentageTextBox">
                 <property name="MemberName">elitesPercentageTextBox</property>
                 <property name="WidthRequest">60</property>
+                <property name="Visible">False</property>
                 <property name="CanFocus">True</property>
                 <property name="Text" translatable="yes">50</property>
                 <property name="IsEditable">True</property>
                 <property name="InvisibleChar">●</property>
               </widget>
               <packing>
-                <property name="X">721</property>
-                <property name="Y">233</property>
+                <property name="X">754</property>
+                <property name="Y">309</property>
               </packing>
             </child>
             <child>
@@ -422,8 +424,8 @@
                 <property name="InvisibleChar">●</property>
               </widget>
               <packing>
-                <property name="X">721</property>
-                <property name="Y">267</property>
+                <property name="X">754</property>
+                <property name="Y">276</property>
               </packing>
             </child>
             <child>
@@ -436,8 +438,8 @@
                 <property name="InvisibleChar">●</property>
               </widget>
               <packing>
-                <property name="X">721</property>
-                <property name="Y">303</property>
+                <property name="X">530</property>
+                <property name="Y">312</property>
               </packing>
             </child>
           </widget>
@@ -471,7 +473,7 @@
         <child>
           <widget class="Gtk.Label" id="label6">
             <property name="MemberName" />
-            <property name="LabelProp" translatable="yes">Authors:</property>
+            <property name="LabelProp" translatable="yes">Student:</property>
           </widget>
           <packing>
             <property name="X">21</property>
@@ -501,7 +503,7 @@
         <child>
           <widget class="Gtk.Label" id="label10">
             <property name="MemberName" />
-            <property name="LabelProp" translatable="yes">Conf. univ. dr. ing. Adrian FLOREA</property>
+            <property name="LabelProp" translatable="yes">Prof. dr. ing. Adrian FLOREA</property>
           </widget>
           <packing>
             <property name="X">33</property>
@@ -1113,7 +1115,6 @@ memorie:</property>
             <property name="CanFocus">True</property>
             <property name="Text" translatable="yes">dl1</property>
             <property name="IsEditable">True</property>
-            <property name="InvisibleChar">•</property>
           </widget>
           <packing>
             <property name="X">90</property>
@@ -1126,7 +1127,6 @@ memorie:</property>
             <property name="CanFocus">True</property>
             <property name="Text" translatable="yes">256</property>
             <property name="IsEditable">True</property>
-            <property name="InvisibleChar">•</property>
           </widget>
           <packing>
             <property name="X">90</property>
@@ -1139,7 +1139,6 @@ memorie:</property>
             <property name="CanFocus">True</property>
             <property name="Text" translatable="yes">32</property>
             <property name="IsEditable">True</property>
-            <property name="InvisibleChar">•</property>
           </widget>
           <packing>
             <property name="X">90</property>
@@ -1152,7 +1151,6 @@ memorie:</property>
             <property name="CanFocus">True</property>
             <property name="Text" translatable="yes">1</property>
             <property name="IsEditable">True</property>
-            <property name="InvisibleChar">•</property>
           </widget>
           <packing>
             <property name="X">90</property>
@@ -1176,7 +1174,6 @@ memorie:</property>
             <property name="CanFocus">True</property>
             <property name="Text" translatable="yes">l</property>
             <property name="IsEditable">True</property>
-            <property name="InvisibleChar">•</property>
           </widget>
           <packing>
             <property name="X">90</property>
@@ -1265,7 +1262,6 @@ memorie:</property>
             <property name="CanFocus">True</property>
             <property name="Text" translatable="yes">il1</property>
             <property name="IsEditable">True</property>
-            <property name="InvisibleChar">•</property>
           </widget>
           <packing>
             <property name="X">365</property>
@@ -1278,7 +1274,6 @@ memorie:</property>
             <property name="CanFocus">True</property>
             <property name="Text" translatable="yes">256</property>
             <property name="IsEditable">True</property>
-            <property name="InvisibleChar">•</property>
           </widget>
           <packing>
             <property name="X">365</property>
@@ -1291,7 +1286,6 @@ memorie:</property>
             <property name="CanFocus">True</property>
             <property name="Text" translatable="yes">l</property>
             <property name="IsEditable">True</property>
-            <property name="InvisibleChar">•</property>
           </widget>
           <packing>
             <property name="X">364</property>
@@ -1304,7 +1298,6 @@ memorie:</property>
             <property name="CanFocus">True</property>
             <property name="Text" translatable="yes">1</property>
             <property name="IsEditable">True</property>
-            <property name="InvisibleChar">•</property>
           </widget>
           <packing>
             <property name="X">364</property>
@@ -1317,7 +1310,6 @@ memorie:</property>
             <property name="CanFocus">True</property>
             <property name="Text" translatable="yes">32</property>
             <property name="IsEditable">True</property>
-            <property name="InvisibleChar">•</property>
           </widget>
           <packing>
             <property name="X">364</property>
@@ -1330,7 +1322,6 @@ memorie:</property>
             <property name="CanFocus">True</property>
             <property name="Text" translatable="yes">dtlb</property>
             <property name="IsEditable">True</property>
-            <property name="InvisibleChar">•</property>
           </widget>
           <packing>
             <property name="X">639</property>
@@ -1343,7 +1334,6 @@ memorie:</property>
             <property name="CanFocus">True</property>
             <property name="Text" translatable="yes">32</property>
             <property name="IsEditable">True</property>
-            <property name="InvisibleChar">•</property>
           </widget>
           <packing>
             <property name="X">639</property>
@@ -1356,7 +1346,6 @@ memorie:</property>
             <property name="CanFocus">True</property>
             <property name="Text" translatable="yes">4096</property>
             <property name="IsEditable">True</property>
-            <property name="InvisibleChar">•</property>
           </widget>
           <packing>
             <property name="X">639</property>
@@ -1369,7 +1358,6 @@ memorie:</property>
             <property name="CanFocus">True</property>
             <property name="Text" translatable="yes">4</property>
             <property name="IsEditable">True</property>
-            <property name="InvisibleChar">•</property>
           </widget>
           <packing>
             <property name="X">639</property>
@@ -1382,7 +1370,6 @@ memorie:</property>
             <property name="CanFocus">True</property>
             <property name="Text" translatable="yes">l</property>
             <property name="IsEditable">True</property>
-            <property name="InvisibleChar">•</property>
           </widget>
           <packing>
             <property name="X">639</property>
@@ -1490,7 +1477,6 @@ memorie:</property>
             <property name="CanFocus">True</property>
             <property name="Text" translatable="yes">dl2</property>
             <property name="IsEditable">True</property>
-            <property name="InvisibleChar">•</property>
           </widget>
           <packing>
             <property name="X">90</property>
@@ -1503,7 +1489,6 @@ memorie:</property>
             <property name="CanFocus">True</property>
             <property name="Text" translatable="yes">il2</property>
             <property name="IsEditable">True</property>
-            <property name="InvisibleChar">•</property>
           </widget>
           <packing>
             <property name="X">364</property>
@@ -1516,7 +1501,6 @@ memorie:</property>
             <property name="CanFocus">True</property>
             <property name="Text" translatable="yes">itlb</property>
             <property name="IsEditable">True</property>
-            <property name="InvisibleChar">•</property>
           </widget>
           <packing>
             <property name="X">639</property>
@@ -1588,7 +1572,6 @@ memorie:</property>
             <property name="CanFocus">True</property>
             <property name="Text" translatable="yes">256</property>
             <property name="IsEditable">True</property>
-            <property name="InvisibleChar">•</property>
           </widget>
           <packing>
             <property name="X">90</property>
@@ -1601,7 +1584,6 @@ memorie:</property>
             <property name="CanFocus">True</property>
             <property name="Text" translatable="yes">32</property>
             <property name="IsEditable">True</property>
-            <property name="InvisibleChar">•</property>
           </widget>
           <packing>
             <property name="X">90</property>
@@ -1614,7 +1596,6 @@ memorie:</property>
             <property name="CanFocus">True</property>
             <property name="Text" translatable="yes">1</property>
             <property name="IsEditable">True</property>
-            <property name="InvisibleChar">•</property>
           </widget>
           <packing>
             <property name="X">90</property>
@@ -1627,7 +1608,6 @@ memorie:</property>
             <property name="CanFocus">True</property>
             <property name="Text" translatable="yes">l</property>
             <property name="IsEditable">True</property>
-            <property name="InvisibleChar">•</property>
           </widget>
           <packing>
             <property name="X">90</property>
@@ -1640,7 +1620,6 @@ memorie:</property>
             <property name="CanFocus">True</property>
             <property name="Text" translatable="yes">256</property>
             <property name="IsEditable">True</property>
-            <property name="InvisibleChar">•</property>
           </widget>
           <packing>
             <property name="X">364</property>
@@ -1653,7 +1632,6 @@ memorie:</property>
             <property name="CanFocus">True</property>
             <property name="Text" translatable="yes">32</property>
             <property name="IsEditable">True</property>
-            <property name="InvisibleChar">•</property>
           </widget>
           <packing>
             <property name="X">364</property>
@@ -1666,7 +1644,6 @@ memorie:</property>
             <property name="CanFocus">True</property>
             <property name="Text" translatable="yes">1</property>
             <property name="IsEditable">True</property>
-            <property name="InvisibleChar">•</property>
           </widget>
           <packing>
             <property name="X">364</property>
@@ -1679,7 +1656,6 @@ memorie:</property>
             <property name="CanFocus">True</property>
             <property name="Text" translatable="yes">l</property>
             <property name="IsEditable">True</property>
-            <property name="InvisibleChar">•</property>
           </widget>
           <packing>
             <property name="X">364</property>
@@ -1692,7 +1668,6 @@ memorie:</property>
             <property name="CanFocus">True</property>
             <property name="Text" translatable="yes">16</property>
             <property name="IsEditable">True</property>
-            <property name="InvisibleChar">•</property>
           </widget>
           <packing>
             <property name="X">639</property>
@@ -1705,7 +1680,6 @@ memorie:</property>
             <property name="CanFocus">True</property>
             <property name="Text" translatable="yes">4096</property>
             <property name="IsEditable">True</property>
-            <property name="InvisibleChar">•</property>
           </widget>
           <packing>
             <property name="X">639</property>
@@ -1718,7 +1692,6 @@ memorie:</property>
             <property name="CanFocus">True</property>
             <property name="Text" translatable="yes">4</property>
             <property name="IsEditable">True</property>
-            <property name="InvisibleChar">•</property>
           </widget>
           <packing>
             <property name="X">639</property>
@@ -1731,7 +1704,6 @@ memorie:</property>
             <property name="CanFocus">True</property>
             <property name="Text" translatable="yes">l</property>
             <property name="IsEditable">True</property>
-            <property name="InvisibleChar">•</property>
           </widget>
           <packing>
             <property name="X">639</property>
@@ -1969,7 +1941,6 @@ memorie:</property>
             <property name="CanFocus">True</property>
             <property name="Text" translatable="yes">1</property>
             <property name="IsEditable">True</property>
-            <property name="InvisibleChar">•</property>
           </widget>
           <packing>
             <property name="X">127</property>
@@ -1982,7 +1953,6 @@ memorie:</property>
             <property name="CanFocus">True</property>
             <property name="Text" translatable="yes">8</property>
             <property name="IsEditable">True</property>
-            <property name="InvisibleChar">•</property>
           </widget>
           <packing>
             <property name="X">127</property>
@@ -1995,7 +1965,6 @@ memorie:</property>
             <property name="CanFocus">True</property>
             <property name="Text" translatable="yes">1024</property>
             <property name="IsEditable">True</property>
-            <property name="InvisibleChar">•</property>
           </widget>
           <packing>
             <property name="X">127</property>
@@ -2052,7 +2021,6 @@ memorie:</property>
             <property name="CanFocus">True</property>
             <property name="Text" translatable="yes">512</property>
             <property name="IsEditable">True</property>
-            <property name="InvisibleChar">•</property>
           </widget>
           <packing>
             <property name="X">126</property>
@@ -2065,7 +2033,6 @@ memorie:</property>
             <property name="CanFocus">True</property>
             <property name="Text" translatable="yes">4</property>
             <property name="IsEditable">True</property>
-            <property name="InvisibleChar">•</property>
           </widget>
           <packing>
             <property name="X">126</property>
@@ -2088,7 +2055,6 @@ memorie:</property>
             <property name="CanFocus">True</property>
             <property name="Text" translatable="yes">2048</property>
             <property name="IsEditable">True</property>
-            <property name="InvisibleChar">•</property>
           </widget>
           <packing>
             <property name="X">126</property>
